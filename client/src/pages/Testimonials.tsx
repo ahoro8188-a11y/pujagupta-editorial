@@ -1,10 +1,12 @@
 /*
  * DESIGN: "The Margin Notes" — Testimonials.
- * Large centered pull-quote presentation of the verified client quote.
- * Only real client feedback is shown; no fabricated reviews.
+ * Index-card ledger of all real client testimonials (7), each with the book
+ * cover, the full quote, the author's name, and the book's purchase link.
+ * Only verified client feedback is shown; no fabricated reviews.
  */
 import { Link } from "wouter";
-import { testimonial } from "@/lib/content";
+import { ExternalLink } from "lucide-react";
+import { testimonials } from "@/lib/content";
 import { InkSwash, PageShell } from "@/components/layout";
 import { useReveal } from "@/hooks/useReveal";
 
@@ -20,7 +22,7 @@ export default function Testimonials() {
             <p className="marginalia">Kind words</p>
           </div>
           <h1 className="reveal font-display text-[4rem] sm:text-[6rem] leading-[0.95] font-semibold text-ink">
-            Testimonials
+            From the authors I've worked with
           </h1>
           <div className="flex flex-wrap items-center gap-4 mt-8 reveal" data-reveal-delay="60">
             <span className="chapter-label">Chapter 05 · Kind words</span>
@@ -29,31 +31,67 @@ export default function Testimonials() {
         </section>
 
         <section className="container py-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <blockquote className="reveal pull-quote text-3xl sm:text-[2.6rem] leading-snug text-ink">
-              "{testimonial.quote}"
-            </blockquote>
-            <div className="reveal mt-12 flex flex-col items-center" data-reveal-delay="100">
-              <InkSwash className="text-sage h-3 w-24 mb-6" />
-              <p className="font-display text-2xl italic text-sage-dark">
-                {testimonial.name}
-              </p>
-              <p className="font-mono text-[0.68rem] tracking-[0.16em] uppercase text-muted-foreground mt-1">
-                {testimonial.role}
-              </p>
-            </div>
-          </div>
+          <div className="space-y-16">
+            {testimonials.map((t, i) => (
+              <article
+                key={t.name}
+                className="reveal grid md:grid-cols-[180px_1fr] lg:grid-cols-[200px_1fr] gap-8 lg:gap-12 border-b border-border pb-16 last:border-b-0"
+                data-reveal-delay="60"
+              >
+                <div className="order-1 md:order-none mx-auto md:mx-0">
+                  {t.cover ? (
+                    <div className="relative w-32 md:w-40 lg:w-full lg:max-w-[180px] overflow-hidden border border-border shadow-sm rotate-[-1.5deg]">
+                      <img
+                        src={t.cover}
+                        alt={`${t.book} — book cover`}
+                        className="w-full object-cover aspect-[2/3]"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-32 md:w-40 lg:w-full lg:max-w-[180px] aspect-[2/3] border border-dashed border-terracotta/40 bg-[oklch(0.96_0.015_60)] flex items-center justify-center rotate-[-1.5deg]">
+                      <span className="font-display text-4xl text-terracotta/50">📖</span>
+                    </div>
+                  )}
+                  <p className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-muted-foreground mt-3 text-center">
+                    <span className="font-display normal-case tracking-normal text-sm">
+                      No. {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </p>
+                </div>
 
-          <div className="reveal mt-24 border border-dashed border-terracotta/40 bg-[oklch(0.96_0.015_60)] p-10 text-center max-w-xl mx-auto">
-            <p className="marginalia mb-3">More to come</p>
-            <p className="font-serif text-base text-muted-foreground leading-relaxed">
-              As more authors and I finish our work together, their words will
-              find their way here — shared only with their permission.
-            </p>
+                <div className="order-2 md:order-none">
+                  <p className="font-mono text-[0.68rem] tracking-[0.16em] uppercase text-terracotta mb-4">
+                    ★★★★★
+                  </p>
+                  <blockquote className="font-serif text-[1.05rem] leading-[1.75] text-ink/90">
+                    "{t.quote}"
+                  </blockquote>
+                  <div className="mt-6 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                    <cite className="not-italic font-display italic text-xl text-sage-dark">
+                      {t.name}
+                    </cite>
+                    {t.book ? (
+                      t.href ? (
+                        <a
+                          href={t.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="swash-link font-mono text-[0.68rem] tracking-[0.14em] uppercase text-muted-foreground inline-flex items-center gap-1.5 hover:text-terracotta"
+                        >
+                          {t.book} <ExternalLink className="h-3 w-3" />
+                        </a>
+                      ) : (
+                        <span className="font-mono text-[0.68rem] tracking-[0.14em] uppercase text-muted-foreground">
+                          {t.book}
+                        </span>
+                      )
+                    ) : null}
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
-          <p className="reveal font-mono text-[0.65rem] tracking-[0.12em] uppercase text-muted-foreground/70 mt-6 text-center">
-            (Only verified client quotes are displayed here)
-          </p>
         </section>
 
         <section className="border-t border-border">

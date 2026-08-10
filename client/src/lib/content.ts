@@ -4,11 +4,178 @@
  */
 export const ASSETS = {
   heroDesk: "/manus-storage/hero-desk_bb994cca.png",
-  heroIllustration: "/manus-storage/hero-portrait-frame_1dc68764.png",
+  heroPortrait: "/manus-storage/puja-hero_d6b0cfc3.png",
+  aboutPhoto: "/manus-storage/puja-portrait_783cb0ee.png",
   blogFeatured: "/manus-storage/blog-featured-kindness_557dd10a.png",
   logo: "/manus-storage/ink-leaf-logo_db66f81d.png",
   texture: "/manus-storage/texture-paper_f1a571ab.png",
 };
+
+export interface PublishedWork {
+  kind: "role" | "book";
+  title: string;
+  description: string;
+  cover?: string;
+  href?: string;
+  hrefLabel?: string;
+  pending?: boolean;
+}
+
+export const publishedWorks: PublishedWork[] = [
+  {
+    kind: "role",
+    title: "Chief Editor & Creative Director — The Alcove Publishers",
+    description:
+      "2018\u20132026. Joined the organisation as a Blogger and progressed to the roles of Editor, Chief Editor, and Creative Director. Successfully managed the end-to-end publishing journey for over 300 books \u2014 from author onboarding and manuscript editing to coordinating cover design, formatting, printing, and publication. Additionally spearheaded book launches, moderated panel discussions, and led content creation for social media campaigns, including promotional posts, book trailers, and teaser videos.",
+  },
+  {
+    kind: "book",
+    title: "An Ode to Spring",
+    description: "Published poetry collection.",
+    href: "https://thealcovepublishers.com/product/an-ode-to-spring/",
+    hrefLabel: "View book \u2192",
+  },
+  {
+    kind: "book",
+    title: "Jazba-e-Ishq",
+    description: "Published poetry collection.",
+    href: "https://thealcovepublishers.com/product/jazba-e-ishq/",
+    hrefLabel: "View book \u2192",
+  },
+  {
+    kind: "role",
+    title: "Freelance Editing Profile",
+    description: "See client reviews and ongoing freelance editing work.",
+    href: "http://www.upwork.com/freelancers/~01ea387e4fbb57689d?p=2071917491534139392",
+    hrefLabel: "View on Upwork \u2192",
+  },
+];
+
+export interface EditedBook {
+  title: string;
+  cover: string;
+  href?: string;
+  pending?: boolean;
+}
+
+export const editedBooks: EditedBook[] = [
+  {
+    title: "Sermons of the Dead",
+    cover: "/manus-storage/cover-sermons_cfe2934c.jpg",
+    href: "https://amzn.in/d/0dZVfuhN",
+  },
+  {
+    title: "Our Roots Run Wild",
+    cover: "/manus-storage/cover-our-roots_64e522b5.jpg",
+    href: "https://amzn.in/d/0hlETcNy",
+  },
+  {
+    title: "Saligia",
+    cover: "/manus-storage/cover-saligia_09ceef80.jpg",
+    pending: true,
+  },
+  {
+    title: "Through Not Your Eyes",
+    cover: "/manus-storage/cover-through-not-your-eyes_28c2a423.jpg",
+    href: "https://amzn.in/d/030xwZXy",
+  },
+  {
+    title: "The Colony Brats",
+    cover: "/manus-storage/cover-colony-brats_7f9f36f1.jpg",
+    href: "https://amzn.in/d/0cPrmmcR",
+  },
+  {
+    title: "The Song of the Waves",
+    cover: "/manus-storage/cover-song-of-waves_7a15a077.jpg",
+    href: "https://amzn.in/d/06ZV76L6",
+  },
+  {
+    title: "Secrets of Mango Rain",
+    cover: "/manus-storage/cover-mango-rain_58bdbef4.jpg",
+    href: "https://amzn.in/d/04CX6bLs",
+  },
+  {
+    title: "Amaltas",
+    cover: "/manus-storage/cover-amaltas_e339c921.jpg",
+    href: "https://amzn.in/d/0baB38V2",
+  },
+  {
+    title: "The Lines of Separation",
+    cover: "/manus-storage/cover-lines-separation_c201d45f.jpg",
+    href: "https://amzn.in/d/0bt1CYvO",
+  },
+  {
+    title: "Jamila \u2013 A Love Beyond the Grave",
+    cover: "/manus-storage/cover-jamila_93119956.jpg",
+    href: "https://amzn.in/d/09v6GefZ",
+  },
+];
+
+export interface Testimonial {
+  quote: string;
+  name: string;
+  book: string;
+  href?: string;
+  cover?: string;
+  stars?: string;
+}
+
+export const testimonials: Testimonial[] = [
+  {
+    quote:
+      "My association with Puja goes right back to my first book 'A Tangible God'. With a keen eye for detail and a sharp sense of reasoning she pointed out the errors in the text with her trademark green, blue and yellow highlights! The typos, the missing punctuations, the tense chaos and the spelling fiascos were all swept away and forgotten. This month, when my fourth book 'Lunch for the Dead' has seen the light, I have to thank Puja for many things. For being constantly available, for replying to my endless queries in record time, for boosting my confidence when I was feeling low, for the kind encouragement when I was in a maze of doubt, for making me feel that my words matter. This personal touch is what makes Puja stand apart. She is remarkable as an editor. As a human being, she is simply exceptional.",
+    name: "Sapna Manoj",
+    book: "A Tangible God \u00b7 Lunch for the Dead",
+    href: "https://amzn.in/d/08rDHSeX",
+    cover: "/manus-storage/cover-tangible-god_0306c64b.jpg",
+  },
+  {
+    quote:
+      "Every writer craves an editor who understands both the manuscript and the person behind it. Working with Puja was definitely one of the best parts of my debut publishing journey. She knew exactly when to challenge a sentence and when to let my voice shine. Her suggestions always strengthened the manuscript without taking away its heart, and our easy rapport made the entire process inspiring and genuinely fun.",
+    name: "Kamalika Mazumder",
+    book: "Heir I Am",
+    href: "https://amzn.in/d/0dMjpLbi",
+    cover: "/manus-storage/cover-heir-i-am_a719d24a.jpg",
+  },
+  {
+    quote:
+      "As an author, I value an editor who not only refines a manuscript but also understands the emotions behind every page. Working with Puja was a truly reassuring experience. She addressed even the smallest of my concerns with patience, professionalism, and genuine care, making the entire editing process smooth and collaborative. What sets Puja apart is her ability to preserve an author's voice while enhancing the manuscript with remarkable attention to detail. She is thoughtful, approachable, and deeply committed to the books she works on. I wholeheartedly recommend her to any author seeking an editor who is both highly skilled and a pleasure to work with.",
+    name: "Bindu P. Menon",
+    book: "Elani",
+    href: "https://amzn.in/d/02xSPi2V",
+    cover: "/manus-storage/cover-elani_d36e4d4f.jpg",
+  },
+  {
+    quote:
+      "As opportunity presented itself, was acquainted with Ms Puja Gupta to edit my book 'Chakra \u2013 The Circle of Life'. She has been a tremendous support in editing the manuscript with open ideas as well as prompt feedback. Always accessible and supportive, Puja Gupta is a joy to work with making the tedious process of editing effortless.",
+    name: "Mytri Sanatkumar",
+    book: "Chakra \u2013 The Circle of Life",
+    href: "https://amzn.in/d/00BqYWa8",
+    cover: "/manus-storage/cover-chakra_cb20cbec.jpg",
+  },
+  {
+    quote:
+      "In my years as an academic author, I have collaborated with many professionals, but Puja stands in a league of her own. She has been far more than an editor; she has been my strongest support system and a true guiding force behind my most vigorous academic works. What sets Puja apart is her profound intellectual generosity. She is an extraordinary listener and a deeply compassionate person. As someone navigating disabilities such as dyslexia and low vision, I often felt like the writing world was not built for me. But Puja never allowed my circumstances to define my potential. It is largely due to Puja's dedication and editorial influence that one of my books is now archived in the Irene Lewisohn Costume Reference Library at The Costume Institute of the Metropolitan Museum of Art in New York. She is a gift to the editing world, and any writer fortunate enough to work with her will find not just an editor, but a partner who genuinely cares about their vision.",
+    name: "Nehmat Kaur Dhillon",
+    book: "Fashion and Somatic Movement Therapy",
+    href: "https://amzn.in/d/02BvyAi5",
+    cover: "/manus-storage/cover-fashion-somatic_7fb22897.jpg",
+  },
+  {
+    quote:
+      "I came in touch with Puja over emails when finalising The Alcove as a publisher for my book, Our Roots Run Wild. Right from attending my queries about the whole process to helping me walk through it, Puja has been a constant support. Her quick, tireless responses made me feel comfortable in dealing with a publisher half the country away \u2014 the distance, in fact, had no consequences. Despite the size and the theme of the book, she has enabled it to see the light of the day. Her editing, in particular, has helped the book come into a readable shape, a skill, among many in the publishing business, that I came to know Puja for.",
+    name: "Aniruddha Dhamorikar",
+    book: "Our Roots Run Wild",
+    href: "https://amzn.in/d/0hlETcNy",
+    cover: "/manus-storage/cover-our-roots_64e522b5.jpg",
+  },
+  {
+    quote:
+      "I am delighted to write this recommendation for Puja Gupta as she transitions into freelance editing. Puja served as the creative editor for my debut collection of short stories, And the River Flows, published by Alcove Publishers. Throughout our collaboration, she was an absolute pillar of professional support. As an author bringing a deeply personal project to life, working with Puja was an incredible experience. What sets Puja apart is not just her keen editorial judgment, but her exceptional approachability and responsiveness. She was consistently prompt, thoughtful, and articulate in her feedback, making the editing process both smooth and rewarding. Beyond her sharp eye for detail, her genuine encouragement and belief in my narrative voice gave me immense confidence throughout the publication journey. Any author or publisher would be incredibly fortunate to work with Puja.",
+    name: "Celia Abraham",
+    book: "And the River Flows",
+  },
+];
 
 export interface BlogPost {
   slug: string;
@@ -95,12 +262,6 @@ export const services = [
   },
 ];
 
-export const testimonial = {
-  quote:
-    "For being constantly available, for making me feel that my words matter.",
-  name: "Sapna Manoj",
-  role: "Author",
-};
 
 export const navLinks = [
   { href: "/", label: "Home" },

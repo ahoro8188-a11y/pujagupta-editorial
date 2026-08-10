@@ -5,7 +5,7 @@
  */
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ASSETS, services, testimonial } from "@/lib/content";
+import { ASSETS, services, testimonials } from "@/lib/content";
 import { InkSwash, Marquee, PageShell } from "@/components/layout";
 import { useReveal } from "@/hooks/useReveal";
 
@@ -46,15 +46,15 @@ export default function Home() {
           </div>
 
           <div className="reveal relative" data-reveal-delay="120">
-            <div className="relative overflow-hidden border border-border">
+            <div className="relative">
               <img
-                src={ASSETS.heroDesk}
-                alt="A writer's desk with a marked-up manuscript, books and chai"
-                className="w-full h-full object-cover aspect-[4/5]"
+                src={ASSETS.heroPortrait}
+                alt="Puja Gupta, editor and author consultant"
+                className="w-full h-auto"
               />
             </div>
             <span className="absolute -bottom-4 -left-4 font-mono text-[0.65rem] tracking-[0.14em] uppercase bg-paper-deep border border-border px-3 py-1.5 text-muted-foreground rotate-[-2deg] shadow-sm">
-              Est. reading nook · 2026
+              Puja Gupta · Est. 2018
             </span>
           </div>
         </section>
@@ -66,8 +66,8 @@ export default function Home() {
           <div className="reveal order-2 lg:order-1">
             <div className="relative overflow-hidden border border-border rotate-[1deg]">
               <img
-                src={ASSETS.heroDesk}
-                alt="A writer's desk in warm light"
+                src={ASSETS.aboutPhoto}
+                alt="Puja Gupta portrait"
                 className="w-full object-cover aspect-[4/5] object-top"
               />
             </div>
@@ -139,10 +139,11 @@ export default function Home() {
           <div className="container py-24 flex flex-col items-center text-center max-w-3xl">
             <p className="marginalia mb-8 reveal">Kind words</p>
             <blockquote className="reveal pull-quote text-3xl sm:text-4xl leading-snug text-ink" data-reveal-delay="80">
-              "{testimonial.quote}"
+              "{testimonials[0].quote}"
             </blockquote>
             <cite className="reveal not-italic mt-8 font-mono text-[0.7rem] tracking-[0.16em] uppercase text-muted-foreground" data-reveal-delay="140">
-              — {testimonial.name}, {testimonial.role}
+              — {testimonials[0].name}, Author
+              {testimonials[0].book ? ` · ${testimonials[0].book}` : ""}
             </cite>
             <Link
               href="/testimonials"

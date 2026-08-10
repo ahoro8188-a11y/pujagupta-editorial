@@ -27,37 +27,44 @@ export default function About() {
           <div className="reveal">
             <div className="relative overflow-hidden border border-border rotate-[-1deg]">
               <img
-                src={ASSETS.heroDesk}
-                alt="A writer's desk"
-                className="w-full object-cover aspect-[4/5]"
+                src={ASSETS.aboutPhoto}
+                alt="Puja Gupta"
+                className="w-full object-cover aspect-[4/5] object-top"
               />
             </div>
             <p className="font-mono text-[0.65rem] tracking-[0.14em] uppercase text-muted-foreground mt-4 rotate-[1deg]">
-              Where the work happens — chai included
+              Writer · Editor · Poet · Mother of two
             </p>
           </div>
 
           <div className="space-y-7">
             <p className="reveal font-serif text-lg sm:text-xl leading-[1.85] text-foreground/90 drop-cap">
-              I'm a writer, poet, and editor with years of experience helping
-              authors turn manuscripts into books they're proud of —
-              detail-oriented, organized, and genuinely invested in every story
-              I work on.
+              I am a writer, poet, music lover, yoga enthusiast, and the proud
+              mother of two wonderful daughters. Stories, books, and meaningful
+              conversations have always been at the heart of my life. I love
+              writing, reading, singing, and connecting with people from all
+              walks of life — believing that every person has a story worth
+              listening to.
             </p>
             <p className="reveal font-serif text-lg leading-[1.85] text-muted-foreground" data-reveal-delay="60">
+              By nature, I am curious, detail-oriented, and deeply observant —
+              qualities that shape both my writing and the way I approach life.
+              I enjoy understanding people, exploring different perspectives, and
+              finding beauty in everyday moments. Whether through my words or my
+              interactions, I hope to inspire, connect, and leave my readers with
+              something to reflect on long after they've turned the last page.
+            </p>
+            <p className="reveal font-serif text-lg leading-[1.85] text-muted-foreground" data-reveal-delay="100">
               Editing, for me, is an act of care. Every manuscript that lands on
               my desk is someone's long-held story, and it deserves a reader who
               pays attention — to its shape, its voice, and its smallest
               sentences.
             </p>
-            <p className="reveal font-serif text-lg leading-[1.85] text-muted-foreground" data-reveal-delay="100">
-              Beyond the desk, I am a poet and a mom of two — which has taught
-              me more about patience and listening than any craft book ever
-              could.
-            </p>
 
             <blockquote className="reveal pull-quote text-2xl sm:text-[1.6rem] leading-snug text-ink pt-8 lg:ml-10" data-reveal-delay="140">
-              "An honest page is worth more than a perfect one."
+              "I love to spend time doing what I love most — reading and
+              writing. I wish to put this passion and skill to give back to my
+              fraternity."
             </blockquote>
 
             <Link
@@ -75,20 +82,58 @@ export default function About() {
         <section className="border-t border-border">
           <div className="container py-20">
             <div className="flex items-center gap-4 mb-10">
-              <span className="chapter-label">The three lives</span>
-              <span className="stamp-note text-xl hidden sm:inline-block">editor · poet · consultant</span>
+              <span className="chapter-label">In the margins</span>
+              <span className="stamp-note text-xl hidden sm:inline-block">hobbies &amp; interests</span>
             </div>
-            <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
-            {[
-              { t: "Editor", d: "Every story deserves a careful second pair of eyes." },
-              { t: "Poet", d: "I believe sentences should earn every word they carry." },
-              { t: "Author Consultant", d: "From first draft anxiety to launch-day nerves, I've got you." },
-            ].map((c, i) => (
-              <div key={c.t} className="reveal bg-card p-8" data-reveal-delay={String(i * 80)}>
-                <p className="font-display italic text-2xl text-sage-dark mb-3">{c.t}</p>
-                <p className="font-serif text-base text-muted-foreground leading-relaxed">{c.d}</p>
+            <div className="reveal border border-border bg-card p-8 sm:p-10 max-w-2xl">
+              <p className="font-serif text-lg text-muted-foreground leading-relaxed">
+                <span className="font-display italic text-2xl text-sage-dark">Music · Books · Shayari · Movies</span>
+                <span className="block mt-4 text-base">…and of course, more reading and writing.</span>
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 mt-16">
+              <div>
+                <p className="marginalia mb-6">Education</p>
+                <div className="space-y-5">
+                  {[
+                    { d: "MBA (HR)", s: "BVIMR, New Delhi — 1992–1994" },
+                    { d: "BSc (PCM)", s: "Hansraj College, Delhi University — 1989–1992" },
+                    { d: "Intermediate", s: "Ramjas School, New Delhi, CBSE — 1989" },
+                    { d: "Matriculation", s: "Ramjas School, New Delhi, CBSE — 1987" },
+                  ].map((e) => (
+                    <div key={e.d} className="reveal border-b border-border pb-4">
+                      <p className="font-display text-xl font-semibold text-ink">{e.d}</p>
+                      <p className="font-serif text-sm text-muted-foreground mt-1">{e.s}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
+              <div>
+                <p className="marginalia mb-6">Skills</p>
+                <div className="flex flex-wrap gap-2.5">
+                  {[
+                    "Editing & Proofreading",
+                    "Communication",
+                    "Time Management",
+                    "Project Management",
+                    "Detail Oriented",
+                    "On-Time Delivery",
+                    "Transparency",
+                    "MS Word",
+                    "Excel",
+                    "Google Docs",
+                  ].map((c, i) => (
+                    <span
+                      key={c}
+                      className="reveal chip font-serif text-[0.95rem] px-4 py-1.5 border border-border bg-card text-muted-foreground"
+                      data-reveal-delay={String(i * 40)}
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
