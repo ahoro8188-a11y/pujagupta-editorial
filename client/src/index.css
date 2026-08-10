@@ -1,3 +1,10 @@
+/*
+ * DESIGN: "The Margin Notes" — Warm Literary Editorial
+ * Paper: cream oklch(0.97 0.015 85) | Ink: warm brown-black
+ * Sage green = brand accent | Terracotta = secondary accent (quotes, stars, hover)
+ * Display: Cormorant Garamond | Body: Newsreader | Marginalia: IBM Plex Mono | Script: Pinyon
+ * Motion: gentle fade-up, ≤300ms ease-out, respect prefers-reduced-motion
+ */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -27,98 +34,101 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --color-terracotta: var(--terracotta);
+  --color-sage: var(--sage);
+  --color-sage-dark: var(--sage-dark);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-script: "Pinyon Script", cursive;
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  --radius: 0.25rem;
+  /* Paper & ink */
+  --paper: oklch(0.97 0.015 85);
+  --paper-deep: oklch(0.93 0.02 85);
+  --ink: oklch(0.28 0.02 60);
+  --terracotta: oklch(0.58 0.13 40);
+  --sage: oklch(0.55 0.08 145);
+  --sage-dark: oklch(0.42 0.07 145);
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: oklch(0.985 0.01 85);
+  --card-foreground: var(--ink);
+  --popover: oklch(0.985 0.01 85);
+  --popover-foreground: var(--ink);
+  --primary: var(--sage-dark);
+  --primary-foreground: oklch(0.98 0.01 85);
+  --secondary: var(--paper-deep);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.93 0.015 85);
+  --muted-foreground: oklch(0.48 0.02 60);
+  --accent: oklch(0.9 0.03 85);
+  --accent-foreground: var(--ink);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --border: oklch(0.86 0.02 80);
+  --input: oklch(0.86 0.02 80);
+  --ring: var(--sage);
+  --chart-1: var(--sage);
+  --chart-2: var(--terracotta);
+  --chart-3: var(--sage-dark);
+  --chart-4: oklch(0.7 0.06 145);
+  --chart-5: oklch(0.75 0.08 60);
+  --sidebar: var(--paper);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--sage-dark);
+  --sidebar-primary-foreground: oklch(0.98 0.01 85);
+  --sidebar-accent: oklch(0.9 0.03 85);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: oklch(0.86 0.02 80);
+  --sidebar-ring: var(--sage);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
+  /* Same warm editorial palette; dark variant not primary but kept consistent */
+  --background: oklch(0.22 0.02 60);
+  --foreground: oklch(0.93 0.015 85);
+  --card: oklch(0.26 0.02 60);
+  --card-foreground: oklch(0.93 0.015 85);
+  --popover: oklch(0.26 0.02 60);
+  --popover-foreground: oklch(0.93 0.015 85);
+  --primary: oklch(0.7 0.06 145);
+  --primary-foreground: oklch(0.2 0.02 60);
+  --secondary: oklch(0.28 0.02 60);
+  --secondary-foreground: oklch(0.9 0.015 85);
+  --muted: oklch(0.3 0.02 60);
+  --muted-foreground: oklch(0.7 0.015 85);
+  --accent: oklch(0.32 0.02 60);
+  --accent-foreground: oklch(0.93 0.015 85);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
+  --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --ring: oklch(0.7 0.06 145);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: oklch(0.7 0.06 145 / 0.4);
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -134,24 +144,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -162,16 +159,211 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
+    }
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  .font-script {
+    font-family: var(--font-script);
+  }
+
+  /* Paper grain overlay */
+  .paper-grain {
+    position: relative;
+  }
+  .paper-grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("/manus-storage/texture-paper_f1a571ab.png");
+    background-size: 380px;
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+  }
+  .paper-grain > * {
+    position: relative;
+  }
+
+  /* Desktop margin rail: numbered mono annotations running along the reading margin */
+  .margin-rail {
+    position: relative;
+  }
+  @media (min-width: 1024px) {
+    .margin-rail .rail-note {
+      position: absolute;
+      left: -8.5rem;
+      width: 7.5rem;
+      text-align: right;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      line-height: 1.7;
+    }
+    .margin-rail .rail-note::before {
+      content: "—";
+      margin-right: 0.4em;
+      color: var(--sage);
+    }
+  }
+  @media (max-width: 1023px) {
+    .margin-rail .rail-note {
+      display: none;
+    }
+  }
+
+  /* Bookplate-like chapter label */
+  .chapter-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid oklch(0.55 0.08 145 / 0.45);
+    padding: 0.4rem 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    background: oklch(0.97 0.015 85 / 0.6);
+  }
+
+  /* Ink stamp flourish for headings */
+  .stamp-note {
+    font-family: var(--font-script);
+    color: var(--terracotta);
+    transform: rotate(-3deg);
+    display: inline-block;
+  }
+
+  /* Marginalia annotation text */
+  .marginalia {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+  }
+
+  /* Hand-drawn swash underline for links / headings */
+  .swash-link {
+    position: relative;
+    text-decoration: none;
+  }
+  .swash-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.12em;
+    height: 0.18em;
+    width: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0 6 Q 25 2, 50 6 T 100 5' fill='none' stroke='%23c05a34' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E")
+      no-repeat center / 100% 100%;
+    transition: width 260ms var(--ease-out);
+  }
+  .swash-link:hover::after,
+  .swash-link.active::after {
+    width: 100%;
+  }
+
+  /* Drop cap for articles */
+  .drop-cap::first-letter {
+    font-family: var(--font-display);
+    font-weight: 600;
+    float: left;
+    font-size: 4.6em;
+    line-height: 0.82;
+    padding-right: 0.14em;
+    padding-top: 0.06em;
+    color: var(--sage-dark);
+  }
+
+  /* Pull quote mark */
+  .pull-quote {
+    position: relative;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+  }
+  .pull-quote::before {
+    content: "\201C";
+    position: absolute;
+    left: -0.45em;
+    top: -0.35em;
+    font-size: 4.2em;
+    color: var(--terracotta);
+    opacity: 0.85;
+    line-height: 1;
+    font-style: normal;
+  }
+
+  /* Editorial double-rule divider with diamond */
+  .editorial-rule {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .editorial-rule::before,
+  .editorial-rule::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+  .editorial-rule::before {
+    border-bottom: 1px solid var(--border);
+    top: -2px;
+  }
+
+  /* Gentle entrance animations */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 600ms var(--ease-out),
+        transform 600ms var(--ease-out);
+    }
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .marquee-strip {
+      animation: marquee 42s linear infinite;
+    }
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
     }
   }
 }
