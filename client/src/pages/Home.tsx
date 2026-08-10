@@ -16,7 +16,11 @@ export default function Home() {
     <PageShell>
       <div ref={ref} className="paper-grain">
         {/* ── Hero spread ───────────────────────────────────── */}
-        <section className="container grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center pt-10 pb-20">
+        <section className="hero-wash container grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center pt-10 pb-20">
+          {/* Floating blue ink dots */}
+          <span className="float-dot pointer-events-none absolute top-[18%] right-[28%] h-14 w-14 rounded-full border border-[var(--blue-soft)]/40 hidden lg:block" aria-hidden="true" />
+          <span className="float-dot pointer-events-none absolute top-[60%] right-[46%] h-8 w-8 rounded-full bg-[var(--blue-soft)]/15 hidden lg:block" aria-hidden="true" />
+          <span className="float-dot pointer-events-none absolute bottom-[12%] left-[8%] h-10 w-10 rounded-full border border-[var(--blue-soft)]/30 hidden lg:block" aria-hidden="true" />
           <div className="reveal">
             <p className="marginalia mb-5">Editor &amp; Author Consultant</p>
             <h1 className="font-display text-[3.6rem] sm:text-[4.8rem] leading-[0.98] font-semibold">
