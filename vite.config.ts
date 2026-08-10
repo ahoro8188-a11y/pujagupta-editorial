@@ -203,6 +203,10 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
+// GitHub Pages needs an explicit base path (e.g. "/pujagupta-editorial/").
+// Set via `base` option in build mode only, so the dev server keeps working at "/".
+const isGhPages = process.env.BASE_PATH || "";
+
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
 
 export default defineConfig({
@@ -214,6 +218,8 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
+  // Only set base for production builds (GitHub Pages); dev always uses "/".
+  base: isGhPages || "/",
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),
   build: {

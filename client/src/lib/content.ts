@@ -3,12 +3,12 @@
  * Brand: warm, literate, meticulous. Headlines read like a book jacket.
  */
 export const ASSETS = {
-  heroDesk: "/manus-storage/hero-desk_bb994cca.png",
-  heroPortrait: "/manus-storage/puja-hero_d6b0cfc3.png",
-  aboutPhoto: "/manus-storage/puja-portrait_783cb0ee.png",
-  blogFeatured: "/manus-storage/blog-featured-kindness_557dd10a.png",
-  logo: "/manus-storage/ink-leaf-logo_db66f81d.png",
-  texture: "/manus-storage/texture-paper_f1a571ab.png",
+  heroDesk: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/hero-desk_bb994cca.png`,
+  heroPortrait: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/puja-hero_d6b0cfc3.png`,
+  aboutPhoto: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/puja-portrait_783cb0ee.png`,
+  blogFeatured: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/blog-featured-kindness_557dd10a.png`,
+  logo: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/ink-leaf-logo_db66f81d.png`,
+  texture: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/texture-paper_f1a571ab.png`,
 };
 
 export interface PublishedWork {
@@ -61,52 +61,52 @@ export interface EditedBook {
 export const editedBooks: EditedBook[] = [
   {
     title: "Sermons of the Dead",
-    cover: "/manus-storage/cover-sermons_cfe2934c.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-sermons_cfe2934c.jpg`,
     href: "https://amzn.in/d/0dZVfuhN",
   },
   {
     title: "Our Roots Run Wild",
-    cover: "/manus-storage/cover-our-roots_64e522b5.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-our-roots_64e522b5.jpg`,
     href: "https://amzn.in/d/0hlETcNy",
   },
   {
     title: "Saligia",
-    cover: "/manus-storage/cover-saligia_09ceef80.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-saligia_09ceef80.jpg`,
     pending: true,
   },
   {
     title: "Through Not Your Eyes",
-    cover: "/manus-storage/cover-through-not-your-eyes_28c2a423.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-through-not-your-eyes_28c2a423.jpg`,
     href: "https://amzn.in/d/030xwZXy",
   },
   {
     title: "The Colony Brats",
-    cover: "/manus-storage/cover-colony-brats_7f9f36f1.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-colony-brats_7f9f36f1.jpg`,
     href: "https://amzn.in/d/0cPrmmcR",
   },
   {
     title: "The Song of the Waves",
-    cover: "/manus-storage/cover-song-of-waves_7a15a077.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-song-of-waves_7a15a077.jpg`,
     href: "https://amzn.in/d/06ZV76L6",
   },
   {
     title: "Secrets of Mango Rain",
-    cover: "/manus-storage/cover-mango-rain_58bdbef4.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-mango-rain_58bdbef4.jpg`,
     href: "https://amzn.in/d/04CX6bLs",
   },
   {
     title: "Amaltas",
-    cover: "/manus-storage/cover-amaltas_e339c921.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-amaltas_e339c921.jpg`,
     href: "https://amzn.in/d/0baB38V2",
   },
   {
     title: "The Lines of Separation",
-    cover: "/manus-storage/cover-lines-separation_c201d45f.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-lines-separation_c201d45f.jpg`,
     href: "https://amzn.in/d/0bt1CYvO",
   },
   {
     title: "Jamila \u2013 A Love Beyond the Grave",
-    cover: "/manus-storage/cover-jamila_93119956.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-jamila_93119956.jpg`,
     href: "https://amzn.in/d/09v6GefZ",
   },
 ];
@@ -127,7 +127,7 @@ export const testimonials: Testimonial[] = [
     name: "Sapna Manoj",
     book: "A Tangible God \u00b7 Lunch for the Dead",
     href: "https://amzn.in/d/08rDHSeX",
-    cover: "/manus-storage/cover-tangible-god_0306c64b.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-tangible-god_0306c64b.jpg`,
   },
   {
     quote:
@@ -135,7 +135,7 @@ export const testimonials: Testimonial[] = [
     name: "Kamalika Mazumder",
     book: "Heir I Am",
     href: "https://amzn.in/d/0dMjpLbi",
-    cover: "/manus-storage/cover-heir-i-am_a719d24a.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-heir-i-am_a719d24a.jpg`,
   },
   {
     quote:
@@ -143,7 +143,7 @@ export const testimonials: Testimonial[] = [
     name: "Bindu P. Menon",
     book: "Elani",
     href: "https://amzn.in/d/02xSPi2V",
-    cover: "/manus-storage/cover-elani_d36e4d4f.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-elani_d36e4d4f.jpg`,
   },
   {
     quote:
@@ -151,7 +151,7 @@ export const testimonials: Testimonial[] = [
     name: "Mytri Sanatkumar",
     book: "Chakra \u2013 The Circle of Life",
     href: "https://amzn.in/d/00BqYWa8",
-    cover: "/manus-storage/cover-chakra_cb20cbec.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-chakra_cb20cbec.jpg`,
   },
   {
     quote:
@@ -159,7 +159,7 @@ export const testimonials: Testimonial[] = [
     name: "Nehmat Kaur Dhillon",
     book: "Fashion and Somatic Movement Therapy",
     href: "https://amzn.in/d/02BvyAi5",
-    cover: "/manus-storage/cover-fashion-somatic_7fb22897.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-fashion-somatic_7fb22897.jpg`,
   },
   {
     quote:
@@ -167,7 +167,7 @@ export const testimonials: Testimonial[] = [
     name: "Aniruddha Dhamorikar",
     book: "Our Roots Run Wild",
     href: "https://amzn.in/d/0hlETcNy",
-    cover: "/manus-storage/cover-our-roots_64e522b5.jpg",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/manus-storage/cover-our-roots_64e522b5.jpg`,
   },
   {
     quote:
