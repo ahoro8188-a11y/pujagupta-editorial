@@ -39,7 +39,7 @@ export default function Contact() {
               <p className="marginalia">Say hello</p>
             </div>
             <h1 className="reveal font-display text-[4rem] sm:text-[5.5rem] leading-[0.95] font-semibold text-ink">
-              Let's <span className="italic text-sage-dark">talk</span>
+              Let's <span className="ink-gradient italic">talk</span>
             </h1>
             <div className="flex flex-wrap items-center gap-4 mt-8 reveal" data-reveal-delay="80">
               <span className="chapter-label">Chapter 03 · Say hello</span>
@@ -79,7 +79,7 @@ export default function Contact() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="e.g. Sapna Manoj"
-                  className="bg-background border-border font-serif text-base rounded-none h-12"
+                  className="bg-background border-border font-serif text-base rounded-none h-12 transition-all duration-200 focus:shadow-[0_0_0_3px_oklch(0.68_0.11_80/0.25)]"
                 />
               </div>
               <div className="space-y-2">
@@ -92,7 +92,7 @@ export default function Contact() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="bg-background border-border font-serif text-base rounded-none h-12"
+                  className="bg-background border-border font-serif text-base rounded-none h-12 transition-all duration-200 focus:shadow-[0_0_0_3px_oklch(0.68_0.11_80/0.25)]"
                 />
               </div>
               <div className="space-y-2">
@@ -105,7 +105,7 @@ export default function Contact() {
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Tell me about your manuscript, your goals, or simply say hello…"
                   rows={6}
-                  className="bg-background border-border font-serif text-base rounded-none resize-none"
+                  className="bg-background border-border font-serif text-base rounded-none resize-none transition-all duration-200 focus:shadow-[0_0_0_3px_oklch(0.68_0.11_80/0.25)]"
                 />
               </div>
               <Button

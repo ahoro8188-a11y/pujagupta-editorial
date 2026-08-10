@@ -21,8 +21,8 @@ export default function Blog() {
             <p className="marginalia">The Journal</p>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
-            <h1 className="reveal font-display text-[4rem] sm:text-[6rem] leading-[0.95] font-semibold text-ink">
-              My <span className="italic text-sage-dark">Writing</span>
+            <h1 className="reveal font-display text-[4rem] sm:text-[6rem] leading-[0.95] font-semibold">
+              My <span className="ink-gradient italic">Writing</span>
             </h1>
             <InkSwash className="hidden sm:block text-sage h-5 w-56 mb-8" />
           </div>

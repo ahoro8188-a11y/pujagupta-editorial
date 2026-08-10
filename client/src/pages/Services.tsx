@@ -22,7 +22,7 @@ export default function Services() {
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <h1 className="reveal font-display text-[4rem] sm:text-[6rem] leading-[0.95] font-semibold text-ink">
-              Services
+              <span className="ink-gradient">Services</span>
             </h1>
             <InkSwash className="hidden sm:block text-sage h-5 w-56 mb-8" />
           </div>
@@ -39,7 +39,7 @@ export default function Services() {
           {services.map((s, i) => (
             <div
               key={s.no}
-              className="reveal grid md:grid-cols-[0.5fr_1fr_0.8fr] gap-6 md:gap-12 items-start py-12 border-t border-border last:border-b group"
+              className="reveal grid md:grid-cols-[0.5fr_1fr_0.8fr] gap-6 md:gap-12 items-start py-12 border-t border-border last:border-b group transition-colors duration-300 hover:bg-[oklch(0.94_0.025_85)] hover:border-sage/50"
               data-reveal-delay={String(i * 80)}
             >
               <span className="font-display text-6xl md:text-7xl font-semibold text-terracotta/60 group-hover:text-terracotta transition-colors duration-300">

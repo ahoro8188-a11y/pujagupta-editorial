@@ -18,14 +18,14 @@ export default function About() {
             <span className="h-px w-10 bg-terracotta" />
             <p className="marginalia">My Story</p>
           </div>
-          <h1 className="reveal font-display text-[4rem] sm:text-[6rem] leading-[0.95] font-semibold text-ink">
-            About <span className="italic text-sage-dark">Puja</span>
+          <h1 className="reveal font-display text-[4rem] sm:text-[6rem] leading-[0.95] font-semibold">
+            About <span className="ink-gradient italic">Puja</span>
           </h1>
         </section>
 
         <section className="container pb-24 grid lg:grid-cols-[1fr_1.1fr] gap-14 items-start">
           <div className="reveal">
-            <div className="relative overflow-hidden border border-border rotate-[-1deg]">
+            <div className="tilt-card relative overflow-hidden border border-border rotate-[-1deg]">
               <img
                 src={ASSETS.aboutPhoto}
                 alt="Puja Gupta"

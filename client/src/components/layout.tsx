@@ -8,6 +8,34 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { ASSETS, marqueeWords, navLinks } from "@/lib/content";
 
+function ScrollProgress() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      setProgress(max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <span className="fixed top-0 left-0 right-0 z-[60] h-[3px] pointer-events-none">
+      <span
+        className="block h-full origin-left"
+        style={{
+          width: `${progress}%`,
+          background: "linear-gradient(90deg, var(--plum), var(--terracotta), var(--gold))",
+          transition: "width 100ms linear",
+        }}
+      />
+    </span>
+  );
+}
+
 export function InkSwash({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 120 14" className={className} fill="none" aria-hidden="true">
@@ -43,8 +71,15 @@ export function Navbar() {
       }`}
     >
       <div className="container flex items-center justify-between py-4">
-        <Link href="/" className="flex items-baseline gap-2">
-          <img src={ASSETS.logo} alt="" className="h-9 w-9" />
+        {/* Scroll progress indicator */}
+        <ScrollProgress />
+        <div className="absolute left-0 right-0 bottom-0 h-px bg-border" />
+        <Link href="/" className="group flex items-baseline gap-2">
+          <img
+            src={ASSETS.logo}
+            alt=""
+            className="h-9 w-9 transition-transform duration-300 group-hover:rotate-[12deg]"
+          />
           <span className="font-script text-2xl leading-none text-ink">
             Puja Gupta
           </span>
@@ -119,7 +154,7 @@ export function Marquee() {
       className="bg-[oklch(0.28_0.02_60)] text-[oklch(0.93_0.015_85)] overflow-hidden py-3 whitespace-nowrap"
       aria-hidden="true"
     >
-      <div className="marquee-strip flex w-max">
+      <div className="marquee-strip hover:[animation-play-state:paused] flex w-max">
         {row}
         {row}
         {row}

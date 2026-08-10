@@ -37,6 +37,8 @@
   --color-terracotta: var(--terracotta);
   --color-sage: var(--sage);
   --color-sage-dark: var(--sage-dark);
+  --color-plum: var(--plum);
+  --color-gold: var(--gold);
   --color-ink: var(--ink);
   --color-paper: var(--paper);
   --color-paper-deep: var(--paper-deep);
@@ -55,6 +57,8 @@
   --terracotta: oklch(0.58 0.13 40);
   --sage: oklch(0.55 0.08 145);
   --sage-dark: oklch(0.42 0.07 145);
+  --plum: oklch(0.45 0.08 335);
+  --gold: oklch(0.68 0.11 80);
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -128,7 +132,7 @@
     -webkit-font-smoothing: antialiased;
   }
   ::selection {
-    background: oklch(0.7 0.06 145 / 0.4);
+    background: oklch(0.68 0.11 80 / 0.35);
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -333,6 +337,56 @@
   .editorial-rule::before {
     border-bottom: 1px solid var(--border);
     top: -2px;
+  }
+
+  /* Ink wash gradient text — plum to terracotta for display words */
+  .ink-gradient {
+    background: linear-gradient(120deg, var(--plum) 0%, var(--terracotta) 55%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Tilt-on-hover book card */
+  .tilt-card {
+    transition: transform 320ms var(--ease-out), box-shadow 320ms var(--ease-out);
+    transform-style: preserve-3d;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .tilt-card:hover {
+      transform: rotate(-1.5deg) translateY(-4px);
+      box-shadow: 0 14px 28px -12px oklch(0.28 0.02 60 / 0.25);
+    }
+  }
+
+  /* Gold shimmer on bookplate labels */
+  .shimmer-plate {
+    position: relative;
+    overflow: hidden;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .shimmer-plate::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        transparent 30%,
+        oklch(0.68 0.11 80 / 0.18) 50%,
+        transparent 70%
+      );
+      transform: translateX(-120%);
+      transition: transform 700ms var(--ease-out);
+    }
+    .shimmer-plate:hover::after {
+      transform: translateX(120%);
+    }
+  }
+
+  /* Press feedback for buttons & links */
+  button:active, a:active {
+    transform: scale(0.98);
+    transition: transform 140ms var(--ease-out);
   }
 
   /* Gentle entrance animations */

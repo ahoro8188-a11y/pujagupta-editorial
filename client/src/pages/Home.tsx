@@ -19,8 +19,9 @@ export default function Home() {
         <section className="container grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center pt-10 pb-20">
           <div className="reveal">
             <p className="marginalia mb-5">Editor &amp; Author Consultant</p>
-            <h1 className="font-display text-[3.6rem] sm:text-[4.8rem] leading-[0.98] font-semibold text-ink">
-              Puja Gupta
+            <h1 className="font-display text-[3.6rem] sm:text-[4.8rem] leading-[0.98] font-semibold">
+              <span className="text-ink">Puja </span>
+              <span className="ink-gradient">Gupta</span>
             </h1>
             <InkSwash className="text-sage h-4 w-40 mt-4 mb-6" />
             <p className="font-display italic text-2xl sm:text-3xl text-ink/85 mb-5">
@@ -46,14 +47,14 @@ export default function Home() {
           </div>
 
           <div className="reveal relative" data-reveal-delay="120">
-            <div className="relative">
+            <div className="relative tilt-card">
               <img
                 src={ASSETS.heroPortrait}
                 alt="Puja Gupta, editor and author consultant"
                 className="w-full h-auto"
               />
             </div>
-            <span className="absolute -bottom-4 -left-4 font-mono text-[0.65rem] tracking-[0.14em] uppercase bg-paper-deep border border-border px-3 py-1.5 text-muted-foreground rotate-[-2deg] shadow-sm">
+            <span className="shimmer-plate absolute -bottom-4 -left-4 font-mono text-[0.65rem] tracking-[0.14em] uppercase bg-paper-deep border border-border px-3 py-1.5 text-muted-foreground rotate-[-2deg] shadow-sm">
               Puja Gupta · Est. 2018
             </span>
           </div>
@@ -66,13 +67,13 @@ export default function Home() {
           <div className="reveal order-2 lg:order-1">
             <div className="relative overflow-hidden border border-border rotate-[1deg]">
               <img
-                src={ASSETS.aboutPhoto}
-                alt="Puja Gupta portrait"
-                className="w-full object-cover aspect-[4/5] object-top"
+                src={ASSETS.heroDesk}
+                alt="A writer's desk"
+                className="w-full object-cover aspect-[4/5]"
               />
             </div>
             <p className="stamp-note text-lg mt-4 text-center">
-              read quietly, edit honestly
+              where the work happens — chai included
             </p>
           </div>
           <div className="reveal order-1 lg:order-2" data-reveal-delay="100">

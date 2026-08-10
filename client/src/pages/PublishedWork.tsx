@@ -55,9 +55,9 @@ export default function PublishedWork() {
             <span className="h-px w-10 bg-terracotta" />
             <p className="marginalia">On shelves & in print</p>
           </div>
-          <h1 className="reveal font-display text-[3.4rem] sm:text-[5.5rem] leading-[0.95] font-semibold text-ink">
-            Seven years, <span className="italic text-sage-dark">250+ books</span>
-          </h1>
+            <h1 className="reveal font-display text-[3.4rem] sm:text-[5.5rem] leading-[0.95] font-semibold">
+            Several years, <span className="ink-gradient italic">250+ books</span>
+            </h1>
           <p className="reveal font-serif text-lg text-muted-foreground mt-6 max-w-2xl leading-relaxed">
             From manuscript to market — editing, formatting, and publishing
             across paperback, hardcover, and eBook.
@@ -94,7 +94,7 @@ export default function PublishedWork() {
               {editedBooks.map((b, i) => (
                 <div
                   key={b.title}
-                  className="reveal group"
+                  className="reveal tilt-card group"
                   data-reveal-delay={String((i % 5) * 60)}
                 >
                   {b.href ? (
@@ -102,12 +102,12 @@ export default function PublishedWork() {
                       href={b.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block overflow-hidden border border-border shadow-sm group-hover:shadow-md group-hover:-translate-y-1 transition-all duration-300"
+                      className="shimmer-plate block overflow-hidden border border-border"
                     >
                       <img
                         src={b.cover}
                         alt={`${b.title} — book cover`}
-                        className="w-full object-cover aspect-[2/3] group-hover:scale-[1.03] transition-transform duration-500"
+                        className="w-full object-cover aspect-[2/3] group-hover:scale-[1.04] transition-transform duration-500"
                         loading="lazy"
                       />
                     </a>
