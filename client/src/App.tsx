@@ -6,12 +6,23 @@ import { Route, Router, Switch } from "wouter";
 // GitHub Pages has no server to handle client-side routes, so all URLs
 // use the hash fragment (e.g. /#/about). The hash parser below makes
 // wouter read the hash instead of the pathname.
+import { useState, useEffect, useCallback } from "react";
+
+// GitHub Pages has no server to handle client-side routes, so all URLs
+// use the hash fragment (e.g. /#/about). The hook below makes wouter read
+// the hash and stay reactive when it changes.
 function hashLocationHook(): [string, (path: string, ...args: any[]) => void] {
   const parseHash = () => window.location.hash.replace(/^#/, "") || "/";
-  const navigate = (path: string, ..._args: any[]) => {
-    window.location.hash = path;
-  };
-  return [parseHash(), navigate];
+  const [path, setPath] = useState(parseHash);
+  useEffect(() => {
+    const onChange = () => setPath(parseHash());
+    window.addEventListener("hashchange", onChange);
+    return () => window.removeEventListener("hashchange", onChange);
+  }, []);
+  const navigate = useCallback((target: string, ..._args: any[]) => {
+    window.location.hash = target;
+  }, []);
+  return [path, navigate];
 }
 
 import ErrorBoundary from "./components/ErrorBoundary";
