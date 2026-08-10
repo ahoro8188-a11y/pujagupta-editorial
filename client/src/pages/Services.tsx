@@ -67,7 +67,7 @@ export default function Services() {
           ))}
         </section>
 
-        <section className="bg-paper-deep border-t border-border">
+        <section className="wash-terra border-t border-border">
           <div className="container py-20 text-center max-w-2xl mx-auto">
             <p className="marginalia mb-6 reveal">Not sure where to start?</p>
             <h2 className="reveal font-display text-3xl sm:text-4xl font-semibold italic text-ink mb-6" data-reveal-delay="80">

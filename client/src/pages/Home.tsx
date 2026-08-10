@@ -99,7 +99,7 @@ export default function Home() {
         </section>
 
         {/* ── Services list ────────────────────────────────── */}
-        <section className="border-t border-border">
+        <section className="border-t border-border wash-sage">
           <div className="container py-24">
             <div className="flex items-center gap-4 mb-10 reveal">
               <span className="chapter-label">Chapter 01 · The Craft</span>
@@ -136,11 +136,12 @@ export default function Home() {
         </section>
 
         {/* ── Testimonial pull quote ───────────────────────── */}
-        <section className="bg-paper-deep border-y border-border">
+        <section className="border-y border-border wash-plum wash-glow-plum">
           <div className="container py-24 flex flex-col items-center text-center max-w-3xl">
             <p className="marginalia mb-8 reveal">Kind words</p>
             <blockquote className="reveal pull-quote text-3xl sm:text-4xl leading-snug text-ink" data-reveal-delay="80">
-              "{testimonials[0].quote}"
+              "For being constantly available… for making me feel that my words
+              matter — this personal touch is what makes Puja stand apart."
             </blockquote>
             <cite className="reveal not-italic mt-8 font-mono text-[0.7rem] tracking-[0.16em] uppercase text-muted-foreground" data-reveal-delay="140">
               — {testimonials[0].name}, Author
@@ -157,7 +158,7 @@ export default function Home() {
         </section>
 
         {/* ── Latest from the journal ──────────────────────── */}
-        <section className="container py-24">
+        <section className="container py-24 wash-glow">
           <div className="flex items-end justify-between mb-12">
             <div className="reveal">
               <p className="marginalia mb-4">From the journal</p>

@@ -76,7 +76,7 @@ export default function PublishedWork() {
         </section>
 
         {/* ── The bookshelf: bestsellers she edited ───────────────── */}
-        <section className="border-t border-border">
+        <section className="border-t border-border wash-sage">
           <div className="container py-20">
             <div className="flex flex-wrap items-center justify-between gap-4 mb-12">
               <div className="reveal">

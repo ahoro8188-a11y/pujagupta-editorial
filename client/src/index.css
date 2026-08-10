@@ -59,6 +59,12 @@
   --sage-dark: oklch(0.42 0.07 145);
   --plum: oklch(0.45 0.08 335);
   --gold: oklch(0.68 0.11 80);
+  /* Background wash tones */
+  --wash-sage: oklch(0.94 0.025 145);
+  --wash-plum: oklch(0.93 0.02 335);
+  --wash-gold: oklch(0.94 0.03 80);
+  --wash-terra: oklch(0.94 0.025 45);
+  --wash-ink: oklch(0.24 0.02 60);
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -337,6 +343,36 @@
   .editorial-rule::before {
     border-bottom: 1px solid var(--border);
     top: -2px;
+  }
+
+  /* Tinted section washes — alternate these between sections */
+  .wash-sage { background: var(--wash-sage); }
+  .wash-plum { background: var(--wash-plum); }
+  .wash-gold { background: var(--wash-gold); }
+  .wash-terra { background: var(--wash-terra); }
+  .wash-ink { background: var(--wash-ink); }
+
+  /* Soft radial colour glow behind a section's center */
+  .wash-glow {
+    position: relative;
+  }
+  .wash-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse 60% 50% at 70% 20%,
+      oklch(0.68 0.11 80 / 0.10),
+      transparent 65%
+    );
+  }
+  .wash-glow-plum::before {
+    background: radial-gradient(
+      ellipse 60% 50% at 30% 80%,
+      oklch(0.45 0.08 335 / 0.09),
+      transparent 65%
+    );
   }
 
   /* Ink wash gradient text — plum to terracotta for display words */

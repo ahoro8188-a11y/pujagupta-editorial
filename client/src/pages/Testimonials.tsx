@@ -30,8 +30,8 @@ export default function Testimonials() {
           </div>
         </section>
 
-        <section className="container py-16">
-          <div className="space-y-16">
+        <section className="wash-plum">
+          <div className="container py-16 space-y-16">
             {testimonials.map((t, i) => (
               <article
                 key={t.name}
@@ -94,7 +94,7 @@ export default function Testimonials() {
           </div>
         </section>
 
-        <section className="border-t border-border">
+        <section className="border-t border-border wash-gold">
           <div className="container py-16 text-center">
             <h2 className="reveal font-display text-3xl font-semibold italic text-ink mb-8">
               Want your words to be next?

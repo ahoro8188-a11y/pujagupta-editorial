@@ -79,7 +79,7 @@ export default function About() {
 
         <Marquee />
 
-        <section className="border-t border-border">
+        <section className="border-t border-border wash-gold">
           <div className="container py-20">
             <div className="flex items-center gap-4 mb-10">
               <span className="chapter-label">In the margins</span>
