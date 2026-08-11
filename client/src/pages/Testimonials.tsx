@@ -40,7 +40,7 @@ export default function Testimonials() {
               >
                 <div className="order-1 md:order-none mx-auto md:mx-0">
                   {t.cover ? (
-                    <div className="tilt-card relative w-32 md:w-40 lg:w-full lg:max-w-[180px] overflow-hidden border border-border rotate-[-1.5deg]">
+                    <div className="relative w-32 md:w-40 lg:w-full lg:max-w-[180px] overflow-hidden border border-border">
                       <img
                         src={t.cover}
                         alt={`${t.book} — book cover`}
@@ -49,7 +49,7 @@ export default function Testimonials() {
                       />
                     </div>
                   ) : (
-                    <div className="w-32 md:w-40 lg:w-full lg:max-w-[180px] aspect-[2/3] border border-dashed border-terracotta/40 bg-[oklch(0.96_0.015_60)] flex items-center justify-center rotate-[-1.5deg]">
+                    <div className="w-32 md:w-40 lg:w-full lg:max-w-[180px] aspect-[2/3] border border-dashed border-terracotta/40 bg-[oklch(0.96_0.015_60)] flex items-center justify-center">
                       <span className="font-display text-4xl text-terracotta/50">📖</span>
                     </div>
                   )}

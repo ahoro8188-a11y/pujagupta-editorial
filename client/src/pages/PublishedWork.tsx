@@ -82,7 +82,7 @@ export default function PublishedWork() {
               <div className="reveal">
                 <p className="marginalia mb-3">Bestsellers edited by me</p>
                 <h2 className="font-display text-3xl sm:text-4xl font-semibold">
-                  Books I've had the privilege to edit
+                  Curated editorial projects
                 </h2>
               </div>
               <span className="reveal stamp-note text-lg hidden sm:inline-block">
