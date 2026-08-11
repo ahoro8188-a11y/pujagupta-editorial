@@ -7,6 +7,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { ASSETS, marqueeWords, navLinks } from "@/lib/content";
+import { BackToTopButton } from "./BackToTopButton";
 
 function ScrollProgress() {
   const [progress, setProgress] = useState(0);
@@ -86,51 +87,59 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((l) => (
+          {navLinks.map((link) => (
             <Link
-              key={l.href}
-              href={l.href}
-              className={`swash-link font-mono text-[0.72rem] tracking-[0.14em] uppercase text-ink/80 hover:text-ink transition-colors ${
-                location === l.href ? "active text-ink" : ""
+              key={link.href}
+              href={link.href}
+              className={`font-serif text-sm transition-colors ${
+                location === link.href
+                  ? "text-sage-dark font-semibold"
+                  : "text-ink/70 hover:text-sage-dark"
               }`}
             >
-              {l.label}
+              {link.label}
             </Link>
           ))}
         </nav>
 
-        <button
-          className="lg:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`block h-px w-6 bg-ink transition-transform duration-300 ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
-          />
-          <span
-            className={`block h-px w-6 bg-ink transition-transform duration-300 ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
-          />
-        </button>
+        <div className="lg:hidden">
+          <button
+            onClick={() => setOpen(!open)}
+            className="p-2 hover:bg-muted rounded-md transition-colors"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+          >
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          {open && (
+            <div className="absolute top-full left-0 right-0 bg-paper border-b border-border">
+              <nav className="container py-4 flex flex-col gap-4">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className={`font-serif text-sm transition-colors ${
+                      location === link.href
+                        ? "text-sage-dark font-semibold"
+                        : "text-ink/70 hover:text-sage-dark"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          )}
+        </div>
       </div>
-
-      {open && (
-        <nav className="lg:hidden border-t border-border bg-background/97 backdrop-blur-md">
-          <div className="container flex flex-col py-4 gap-1">
-            {navLinks.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className={`py-2.5 font-mono text-xs tracking-[0.14em] uppercase text-ink/80 hover:text-ink transition-colors ${
-                  location === l.href ? "text-terracotta" : ""
-                }`}
-              >
-                {l.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
-      )}
     </header>
   );
 }
@@ -210,6 +219,7 @@ export function PageShell({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">{children}</main>
+      <BackToTopButton />
       <Footer />
     </div>
   );
