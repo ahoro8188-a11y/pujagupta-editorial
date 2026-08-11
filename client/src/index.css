@@ -135,6 +135,11 @@
   html {
     scroll-behavior: smooth;
   }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-serif);
@@ -468,7 +473,8 @@
   /* Page transition animation */
   @media (prefers-reduced-motion: no-preference) {
     main {
-      animation: pageEnter 500ms var(--ease-out);
+      animation: pageEnter 500ms var(--ease-out) both;
+      will-change: opacity, transform;
     }
     @keyframes pageEnter {
       from {
@@ -488,12 +494,14 @@
       opacity: 0;
       transform: translateY(20px);
       transition:
-        opacity 600ms var(--ease-out),
-        transform 600ms var(--ease-out);
+        opacity 600ms var(--ease-out) var(--reveal-delay, 0ms),
+        transform 600ms var(--ease-out) var(--reveal-delay, 0ms);
+      will-change: opacity, transform;
     }
     .reveal.in-view {
       opacity: 1;
       transform: translateY(0);
+      will-change: auto;
     }
     .marquee-strip {
       animation: marquee 42s linear infinite;

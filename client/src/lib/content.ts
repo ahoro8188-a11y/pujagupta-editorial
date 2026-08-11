@@ -174,7 +174,7 @@ export const testimonials: Testimonial[] = [
       "I am delighted to write this recommendation for Puja Gupta as she transitions into freelance editing. Puja served as the creative editor for my debut collection of short stories, And the River Flows. For being constantly available… for making me feel that my words matter — this personal touch is what makes Puja stand apart.",
     name: "Celia Abraham",
     book: "And the River Flows",
-    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/celia-abraham_cover.jpg`,
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/celia-abraham_cover.jpg.jpeg`,
   },
 ];
 

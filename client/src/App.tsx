@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
+import { useEffect } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Router, Switch } from "wouter";
+import { Route, Router, Switch, useLocation } from "wouter";
 
 // GitHub Pages has no server to handle client-side routes, so all URLs
 // use the hash fragment (e.g. /#/about). wouter's official
@@ -19,10 +20,30 @@ import PublishedWork from "./pages/PublishedWork";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 
-function RouterApp() {
+function ScrollToTopOnRouteChange() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    const previousScrollRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
+
+    return () => {
+      window.history.scrollRestoration = previousScrollRestoration;
+    };
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location]);
+
+  return null;
+}
+
+function RouteSwitch() {
+  const [location] = useLocation();
+
   return (
-    <Router hook={useHashLocation}>
-    <Switch>
+    <Switch key={location}>
       <Route path={"/"} component={Home} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/:slug"} component={Article} />
@@ -34,6 +55,14 @@ function RouterApp() {
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
+  );
+}
+
+function RouterApp() {
+  return (
+    <Router hook={useHashLocation}>
+      <ScrollToTopOnRouteChange />
+      <RouteSwitch />
     </Router>
   );
 }

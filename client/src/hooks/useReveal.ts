@@ -26,7 +26,12 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>() {
       },
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
     );
-    targets.forEach((t) => observer.observe(t));
+    targets.forEach((target, index) => {
+      if (!target.dataset.revealDelay) {
+        target.style.setProperty("--reveal-delay", `${Math.min(index * 60, 240)}ms`);
+      }
+      observer.observe(target);
+    });
     return () => observer.disconnect();
   }, []);
 
