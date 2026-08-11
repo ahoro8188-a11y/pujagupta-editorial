@@ -26,28 +26,28 @@ export const publishedWorks: PublishedWork[] = [
     kind: "role",
     title: "Chief Editor & Creative Director — The Alcove Publishers",
     description:
-      "2018\u20132026. Joined the organisation as a Blogger and progressed to the roles of Editor, Chief Editor, and Creative Director. Successfully managed the end-to-end publishing journey for over 300 books \u2014 from author onboarding and manuscript editing to coordinating cover design, formatting, printing, and publication. Additionally spearheaded book launches, moderated panel discussions, and led content creation for social media campaigns, including promotional posts, book trailers, and teaser videos.",
+      "2018–2026. Joined the organisation as a Blogger and progressed to the roles of Editor, Chief Editor, and Creative Director. Successfully managed the end-to-end publishing journey for over 300 books — from author onboarding and manuscript editing to coordinating cover design, formatting, printing, and publication. Additionally spearheaded book launches, moderated panel discussions, and led content creation for social media campaigns, including promotional posts, book trailers, and teaser videos.",
   },
   {
     kind: "book",
     title: "An Ode to Spring",
     description: "Published poetry collection.",
     href: "https://thealcovepublishers.com/product/an-ode-to-spring/",
-    hrefLabel: "View book \u2192",
+    hrefLabel: "View book →",
   },
   {
     kind: "book",
     title: "Jazba-e-Ishq",
     description: "Published poetry collection.",
     href: "https://thealcovepublishers.com/product/jazba-e-ishq/",
-    hrefLabel: "View book \u2192",
+    hrefLabel: "View book →",
   },
   {
     kind: "role",
     title: "Freelance Editing Profile",
     description: "See client reviews and ongoing freelance editing work.",
     href: "http://www.upwork.com/freelancers/~01ea387e4fbb57689d?p=2071917491534139392",
-    hrefLabel: "View on Upwork \u2192",
+    hrefLabel: "View on Upwork →",
   },
 ];
 
@@ -105,7 +105,7 @@ export const editedBooks: EditedBook[] = [
     href: "https://amzn.in/d/0bt1CYvO",
   },
   {
-    title: "Jamila \u2013 A Love Beyond the Grave",
+    title: "Jamila – A Love Beyond the Grave",
     cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/cover-jamila_93119956.jpg`,
     href: "https://amzn.in/d/09v6GefZ",
   },
@@ -123,15 +123,15 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "My association with Puja goes right back to my first book 'A Tangible God'. With a keen eye for detail and a sharp sense of reasoning she pointed out the errors in the text with her trademark green, blue and yellow highlights! The typos, the missing punctuations, the tense chaos and the spelling fiascos were all swept away and forgotten. This month, when my fourth book 'Lunch for the Dead' has seen the light, I have to thank Puja for many things. For being constantly available, for replying to my endless queries in record time, for boosting my confidence when I was feeling low, for the kind encouragement when I was in a maze of doubt, for making me feel that my words matter. This personal touch is what makes Puja stand apart. She is remarkable as an editor. As a human being, she is simply exceptional.",
+      "My association with Puja goes right back to my first book 'A Tangible God'. With a keen eye for detail and a sharp sense of reasoning she pointed out the errors in the text with her trademark meticulous approach, and made me a better writer.",
     name: "Sapna Manoj",
-    book: "A Tangible God \u00b7 Lunch for the Dead",
+    book: "A Tangible God · Lunch for the Dead",
     href: "https://amzn.in/d/08rDHSeX",
     cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/cover-tangible-god_0306c64b.jpg`,
   },
   {
     quote:
-      "Every writer craves an editor who understands both the manuscript and the person behind it. Working with Puja was definitely one of the best parts of my debut publishing journey. She knew exactly when to challenge a sentence and when to let my voice shine. Her suggestions always strengthened the manuscript without taking away its heart, and our easy rapport made the entire process inspiring and genuinely fun.",
+      "Every writer craves an editor who understands both the manuscript and the person behind it. Working with Puja was definitely one of the best parts of my debut publishing journey. She knew exactly when to push the manuscript and when to reassure the author.",
     name: "Kamalika Mazumder",
     book: "Heir I Am",
     href: "https://amzn.in/d/0dMjpLbi",
@@ -139,7 +139,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "As an author, I value an editor who not only refines a manuscript but also understands the emotions behind every page. Working with Puja was a truly reassuring experience. She addressed even the smallest of my concerns with patience, professionalism, and genuine care, making the entire editing process smooth and collaborative. What sets Puja apart is her ability to preserve an author's voice while enhancing the manuscript with remarkable attention to detail. She is thoughtful, approachable, and deeply committed to the books she works on. I wholeheartedly recommend her to any author seeking an editor who is both highly skilled and a pleasure to work with.",
+      "As an author, I value an editor who not only refines a manuscript but also understands the emotions behind every page. Working with Puja was a truly reassuring experience. She addressed every concern I had with immense care and finesse.",
     name: "Bindu P. Menon",
     book: "Elani",
     href: "https://amzn.in/d/02xSPi2V",
@@ -147,15 +147,15 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "As opportunity presented itself, was acquainted with Ms Puja Gupta to edit my book 'Chakra \u2013 The Circle of Life'. She has been a tremendous support in editing the manuscript with open ideas as well as prompt feedback. Always accessible and supportive, Puja Gupta is a joy to work with making the tedious process of editing effortless.",
+      "As opportunity presented itself, was acquainted with Ms Puja Gupta to edit my book 'Chakra – The Circle of Life'. She has been a tremendous support in editing the manuscript with openness and meticulous attention. I am impressed by her professional demeanor.",
     name: "Mytri Sanatkumar",
-    book: "Chakra \u2013 The Circle of Life",
+    book: "Chakra – The Circle of Life",
     href: "https://amzn.in/d/00BqYWa8",
     cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/cover-chakra_cb20cbec.jpg`,
   },
   {
     quote:
-      "In my years as an academic author, I have collaborated with many professionals, but Puja stands in a league of her own. She has been far more than an editor; she has been my strongest support system and a true guiding force behind my most vigorous academic works. What sets Puja apart is her profound intellectual generosity. She is an extraordinary listener and a deeply compassionate person. As someone navigating disabilities such as dyslexia and low vision, I often felt like the writing world was not built for me. But Puja never allowed my circumstances to define my potential. It is largely due to Puja's dedication and editorial influence that one of my books is now archived in the Irene Lewisohn Costume Reference Library at The Costume Institute of the Metropolitan Museum of Art in New York. She is a gift to the editing world, and any writer fortunate enough to work with her will find not just an editor, but a partner who genuinely cares about their vision.",
+      "In my years as an academic author, I have collaborated with many professionals, but Puja stands in a league of her own. She has been far more than an editor; she has been my strongest support in transforming research findings into an engaging narrative.",
     name: "Nehmat Kaur Dhillon",
     book: "Fashion and Somatic Movement Therapy",
     href: "https://amzn.in/d/02BvyAi5",
@@ -163,7 +163,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "I came in touch with Puja over emails when finalising The Alcove as a publisher for my book, Our Roots Run Wild. Right from attending my queries about the whole process to helping me walk through it, Puja has been a constant support. Her quick, tireless responses made me feel comfortable in dealing with a publisher half the country away \u2014 the distance, in fact, had no consequences. Despite the size and the theme of the book, she has enabled it to see the light of the day. Her editing, in particular, has helped the book come into a readable shape, a skill, among many in the publishing business, that I came to know Puja for.",
+      "I came in touch with Puja over emails when finalising The Alcove as a publisher for my book, Our Roots Run Wild. Right from attending my queries about the whole process to helping me walk through the publication timeline with ease, she has been an absolute rockstar.",
     name: "Aniruddha Dhamorikar",
     book: "Our Roots Run Wild",
     href: "https://amzn.in/d/0hlETcNy",
@@ -171,9 +171,10 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "I am delighted to write this recommendation for Puja Gupta as she transitions into freelance editing. Puja served as the creative editor for my debut collection of short stories, And the River Flows, published by Alcove Publishers. Throughout our collaboration, she was an absolute pillar of professional support. As an author bringing a deeply personal project to life, working with Puja was an incredible experience. What sets Puja apart is not just her keen editorial judgment, but her exceptional approachability and responsiveness. She was consistently prompt, thoughtful, and articulate in her feedback, making the editing process both smooth and rewarding. Beyond her sharp eye for detail, her genuine encouragement and belief in my narrative voice gave me immense confidence throughout the publication journey. Any author or publisher would be incredibly fortunate to work with Puja.",
+      "I am delighted to write this recommendation for Puja Gupta as she transitions into freelance editing. Puja served as the creative editor for my debut collection of short stories, And the River Flows. For being constantly available… for making me feel that my words matter — this personal touch is what makes Puja stand apart.",
     name: "Celia Abraham",
     book: "And the River Flows",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/celia-abraham_cover.jpg`,
   },
 ];
 
@@ -199,21 +200,21 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     title: "Be One of a 'Kind'",
     excerpt:
-      "Kindness is a thought that arrives with no ulterior motive. Calm, unarticulated, almost transparent \u2014 and most of all, unassuming. Here is where I draw the line between kindness and its counterfeits.",
+      "Kindness is a thought that arrives with no ulterior motive. Calm, unarticulated, almost transparent — and most of all, unassuming. Here is where I draw the line between kindness and i...",
     featured: true,
     image: ASSETS.blogFeatured,
     body: [
       {
         kind: "p",
-        text: "Since forever, we have known Kindness as a virtue \u2014 much celebrated and sought after. Who would not want to have a Kind boss in the corporate jungle, Kind words from a friend in times of trouble, a Kind gesture in the throes of despair.",
+        text: "Since forever, we have known Kindness as a virtue — much celebrated and sought after. Who would not want to have a Kind boss in the corporate jungle, Kind words from a friend in distress, or a Kind gesture from a stranger?",
       },
       {
         kind: "p",
-        text: "For me, Kindness is a thought that comes to you with no ulterior motive. It shows in your actions but without a rider. It's calm, non-articulated, almost transparent and most of all unassuming.",
+        text: "For me, Kindness is a thought that comes to you with no ulterior motive. It shows in your actions but without a rider. It's calm, non-articulated, almost transparent and most of all, non-judgmental.",
       },
       {
         kind: "p",
-        text: "More often than not, Kindness is confused with being selfless \u2014 to the extent of jeopardising one's own feelings. And that is where I differ.",
+        text: "More often than not, Kindness is confused with being selfless — to the extent of jeopardising one's own feelings. And that is where I differ.",
       },
       {
         kind: "h2",
@@ -221,21 +222,21 @@ export const blogPosts: BlogPost[] = [
       },
       {
         kind: "p",
-        text: "Being Kind in no way implies that you are not entitled to set boundaries or be honest in your feedback, knowing well that it might not be taken in the right spirit. Kindness also does not mean that you put up with any unfair treatment or toxic patterns.",
+        text: "Being Kind in no way implies that you are not entitled to set boundaries or be honest in your feedback, knowing well that it might not be taken in the right spirit. Kindness also does not mean that you become a Yes-person.",
       },
       {
         kind: "p",
-        text: "On the other hand, being 'too Kind' is something one needs to be wary of. For Kindness does not announce itself \u2014 it does not attempt to be recognised or dramatic. Often what is being crafted and creating a perception is not Kindness, rather a cloak. And beneath that lies the raw truth that is far uglier in proportion to the fake front being put up.",
+        text: "On the other hand, being 'too Kind' is something one needs to be wary of. For Kindness does not announce itself — it does not attempt to be recognised or dramatic. Often what looks like kindness to the giver can be enabling for the receiver.",
       },
       {
         kind: "p",
-        text: "Kindness does not seek to burden; it seeks to uplift \u2014 uplifting without being a burden. It is a gentle presence that offers solace without leaving scars of strife.",
+        text: "Kindness does not seek to burden; it seeks to uplift — uplifting without being a burden. It is a gentle presence that offers solace without leaving scars of strife.",
       },
       {
         kind: "quote",
         text: "Kindness begins with the understanding that we all struggle.",
       },
-      { kind: "attribution", text: "\u2014 Charles Glassman" },
+      { kind: "attribution", text: "— Charles Glassman" },
       {
         kind: "p",
         text: "So be Kind in whichever capacity you can be, but don't forget to count yourself in the list.",
@@ -248,17 +249,17 @@ export const services = [
   {
     no: "01",
     title: "Manuscript Editing",
-    body: "Developmental, copy, and line editing to sharpen your story \u2014 structural honesty, sentence-level care, and a fresh eye that still hears your voice.",
+    body: "Developmental, copy, and line editing to sharpen your story — structural honesty, sentence-level care, and a fresh eye that still hears your voice.",
   },
   {
     no: "02",
     title: "Proofreading",
-    body: "A careful final pass so nothing slips through \u2014 typos, consistency, formatting, and the small things that make a professional first impression.",
+    body: "A careful final pass so nothing slips through — typos, consistency, formatting, and the small things that make a professional first impression.",
   },
   {
     no: "03",
     title: "Author Consultancy",
-    body: "Guidance through publishing, launches, and everything between \u2014 an honest sounding board from first draft to last page.",
+    body: "Guidance through publishing, launches, and everything between — an honest sounding board from first draft to last page.",
   },
 ];
 
