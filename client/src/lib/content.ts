@@ -26,7 +26,7 @@ export const publishedWorks: PublishedWork[] = [
     kind: "role",
     title: "Chief Editor & Creative Director — The Alcove Publishers",
     description:
-      "2018–2026. Joined the organisation as a Blogger and progressed to the roles of Editor, Chief Editor, and Creative Director. Successfully managed the end-to-end publishing journey for over 300 books — from author onboarding and manuscript editing to coordinating cover design, formatting, printing, and publication. Additionally spearheaded book launches, moderated panel discussions, and led content creation for social media campaigns, including promotional posts, book trailers, and teaser videos.",
+      "2018–2026. Joined the organisation as a Blogger and progressed to the roles of Editor, Chief Editor, and Creative Director. Successfully managed the end-to-end publishing journey for over[...]",
   },
   {
     kind: "book",
@@ -123,7 +123,7 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "My association with Puja goes right back to my first book 'A Tangible God'. With a keen eye for detail and a sharp sense of reasoning she pointed out the errors in the text with her trademark meticulous approach, and made me a better writer.",
+      "My association with Puja goes right back to my first book 'A Tangible God'. With a keen eye for detail and a sharp sense of reasoning she pointed out the errors in the text with her tradem[...]",
     name: "Sapna Manoj",
     book: "A Tangible God · Lunch for the Dead",
     href: "https://amzn.in/d/08rDHSeX",
@@ -131,7 +131,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Every writer craves an editor who understands both the manuscript and the person behind it. Working with Puja was definitely one of the best parts of my debut publishing journey. She knew exactly when to push the manuscript and when to reassure the author.",
+      "Every writer craves an editor who understands both the manuscript and the person behind it. Working with Puja was definitely one of the best parts of my debut publishing journey. She knew [...]",
     name: "Kamalika Mazumder",
     book: "Heir I Am",
     href: "https://amzn.in/d/0dMjpLbi",
@@ -139,7 +139,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "As an author, I value an editor who not only refines a manuscript but also understands the emotions behind every page. Working with Puja was a truly reassuring experience. She addressed every concern I had with immense care and finesse.",
+      "As an author, I value an editor who not only refines a manuscript but also understands the emotions behind every page. Working with Puja was a truly reassuring experience. She addressed ev[...]",
     name: "Bindu P. Menon",
     book: "Elani",
     href: "https://amzn.in/d/02xSPi2V",
@@ -147,7 +147,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "As opportunity presented itself, was acquainted with Ms Puja Gupta to edit my book 'Chakra – The Circle of Life'. She has been a tremendous support in editing the manuscript with openness and meticulous attention. I am impressed by her professional demeanor.",
+      "As opportunity presented itself, was acquainted with Ms Puja Gupta to edit my book 'Chakra – The Circle of Life'. She has been a tremendous support in editing the manuscript with opennes[...]",
     name: "Mytri Sanatkumar",
     book: "Chakra – The Circle of Life",
     href: "https://amzn.in/d/00BqYWa8",
@@ -155,7 +155,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "In my years as an academic author, I have collaborated with many professionals, but Puja stands in a league of her own. She has been far more than an editor; she has been my strongest support in transforming research findings into an engaging narrative.",
+      "In my years as an academic author, I have collaborated with many professionals, but Puja stands in a league of her own. She has been far more than an editor; she has been my strongest supp[...]",
     name: "Nehmat Kaur Dhillon",
     book: "Fashion and Somatic Movement Therapy",
     href: "https://amzn.in/d/02BvyAi5",
@@ -163,7 +163,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "I came in touch with Puja over emails when finalising The Alcove as a publisher for my book, Our Roots Run Wild. Right from attending my queries about the whole process to helping me walk through the publication timeline with ease, she has been an absolute rockstar.",
+      "I came in touch with Puja over emails when finalising The Alcove as a publisher for my book, Our Roots Run Wild. Right from attending my queries about the whole process to helping me walk [...]",
     name: "Aniruddha Dhamorikar",
     book: "Our Roots Run Wild",
     href: "https://amzn.in/d/0hlETcNy",
@@ -171,7 +171,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "I am delighted to write this recommendation for Puja Gupta as she transitions into freelance editing. Puja served as the creative editor for my debut collection of short stories, And the River Flows. For being constantly available… for making me feel that my words matter — this personal touch is what makes Puja stand apart.",
+      "I am delighted to write this recommendation for Puja Gupta as she transitions into freelance editing. Puja served as the creative editor for my debut collection of short stories, And the R[...]",
     name: "Celia Abraham",
     book: "And the River Flows",
     cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/celia-abraham_cover.jpg.jpeg`,
@@ -200,17 +200,17 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     title: "Be One of a 'Kind'",
     excerpt:
-      "Kindness is a thought that arrives with no ulterior motive. Calm, unarticulated, almost transparent — and most of all, unassuming. Here is where I draw the line between kindness and i...",
+      "Kindness is a thought that arrives with no ulterior motive. Calm, unarticulated, almost transparent — and most of all, unassuming. Here is where I draw the line between kindness and i[...]",
     featured: true,
     image: ASSETS.blogFeatured,
     body: [
       {
         kind: "p",
-        text: "Since forever, we have known Kindness as a virtue — much celebrated and sought after. Who would not want to have a Kind boss in the corporate jungle, Kind words from a friend in distress, or a Kind gesture from a stranger?",
+        text: "Since forever, we have known Kindness as a virtue — much celebrated and sought after. Who would not want to have a Kind boss in the corporate jungle, Kind words from a friend in [...]",
       },
       {
         kind: "p",
-        text: "For me, Kindness is a thought that comes to you with no ulterior motive. It shows in your actions but without a rider. It's calm, non-articulated, almost transparent and most of all, non-judgmental.",
+        text: "For me, Kindness is a thought that comes to you with no ulterior motive. It shows in your actions but without a rider. It's calm, non-articulated, almost transparent and most of al[...]",
       },
       {
         kind: "p",
@@ -222,11 +222,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         kind: "p",
-        text: "Being Kind in no way implies that you are not entitled to set boundaries or be honest in your feedback, knowing well that it might not be taken in the right spirit. Kindness also does not mean that you become a Yes-person.",
+        text: "Being Kind in no way implies that you are not entitled to set boundaries or be honest in your feedback, knowing well that it might not be taken in the right spirit. Kindness also d[...]",
       },
       {
         kind: "p",
-        text: "On the other hand, being 'too Kind' is something one needs to be wary of. For Kindness does not announce itself — it does not attempt to be recognised or dramatic. Often what looks like kindness to the giver can be enabling for the receiver.",
+        text: "On the other hand, being 'too Kind' is something one needs to be wary of. For Kindness does not announce itself — it does not attempt to be recognised or dramatic. Often what loo[...]",
       },
       {
         kind: "p",
@@ -259,7 +259,7 @@ export const services = [
   {
     no: "03",
     title: "Author Consultancy",
-    body: "Guidance through publishing, launches, and everything between — an honest sounding board from first draft to last page.",
+    body: "Guidance through the publishing process, cover suggestions, formatting ideas, and launch strategy - from manuscript to market.",
   },
 ];
 
