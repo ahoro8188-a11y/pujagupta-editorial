@@ -27,7 +27,7 @@ export default function Blog() {
             <InkSwash className="hidden sm:block text-sage h-5 w-56 mb-8" />
           </div>
           <p className="reveal font-serif text-lg text-muted-foreground max-w-xl mt-4 leading-relaxed" data-reveal-delay="100">
-            Essays on life, craft, etc....
+            Essays on life, craft, and the honest work of shaping stories — one quiet page at a time.
           </p>
         </section>
 

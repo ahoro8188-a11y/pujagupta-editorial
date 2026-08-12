@@ -259,7 +259,7 @@ export const services = [
   {
     no: "03",
     title: "Author Consultancy",
-    body: "Guidance through the publishing process, cover suggestions, formatting ideas, and launch strategy - from manuscript to market.",
+    body: "Guidance through the publishing process, cover suggestions, formatting ideas, and launch strategy — from manuscript to market.",
   },
 ];
 
