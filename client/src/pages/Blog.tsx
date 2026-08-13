@@ -78,7 +78,7 @@ export default function Blog() {
         <section className="border-t border-border bg-paper-deep/60">
           <div className="container py-16">
             <div className="flex items-center gap-4 mb-12 reveal">
-              <span className="chapter-label">Continued · Entries</span>
+              <span className="chapter-label">Chapter 05 · The Journal</span>
               <span className="stamp-note text-xl hidden sm:inline-block">
                 earlier &amp; upcoming
               </span>

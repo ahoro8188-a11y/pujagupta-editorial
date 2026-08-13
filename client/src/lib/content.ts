@@ -26,7 +26,7 @@ export const publishedWorks: PublishedWork[] = [
     kind: "role",
     title: "Chief Editor & Creative Director — The Alcove Publishers",
     description:
-      "2018–2026. Joined the organisation as a Blogger and progressed to the roles of Editor, Chief Editor, and Creative Director. Successfully managed the end-to-end publishing journey for over[...]",
+      "2018–2026. Joined the organization as a Blogger and progressed to the roles of Editor, Chief Editor, and Creative Director. Successfully managed the end-to-end publishing journey for over 300 books, from author onboarding and manuscript editing to coordinating cover design, formatting, printing, and publication, ensuring each project aligned with the author's vision and publishing goals. Additionally, spearheaded book launches, moderated panel discussions, and led content creation for social media campaigns, including promotional posts, book trailers, and teaser videos.",
   },
   {
     kind: "book",
@@ -72,7 +72,7 @@ export const editedBooks: EditedBook[] = [
   {
     title: "Saligia",
     cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/cover-saligia_09ceef80.jpg`,
-    pending: true,
+    href: "https://amzn.in/d/0ij9Zvwx",
   },
   {
     title: "Through Not Your Eyes",
@@ -123,7 +123,7 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "My association with Puja goes right back to my first book 'A Tangible God'. With a keen eye for detail and a sharp sense of reasoning she pointed out the errors in the text with her tradem[...]",
+      "My association with Puja goes right back to my first book 'A Tangible God'. With a keen eye for detail and a sharp sense of reasoning she pointed out the errors in the text with her trademark green, blue and yellow highlights! The typos, the missing punctuations, the tense chaos and the spelling fiascos were all swept away and forgotten. This month, when my fourth book 'Lunch for the Dead' has seen the light, I have to thank Puja for many things. For being constantly available, for replying to my endless queries in record time, for boosting my confidence when I was feeling low, for the kind encouragement when I was in a maze of doubt, for making me feel that my words matter. This personal touch is what makes Puja stand apart. She is remarkable as an editor. As a human being, she is simply exceptional.",
     name: "Sapna Manoj",
     book: "A Tangible God · Lunch for the Dead",
     href: "https://amzn.in/d/08rDHSeX",
@@ -131,7 +131,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Every writer craves an editor who understands both the manuscript and the person behind it. Working with Puja was definitely one of the best parts of my debut publishing journey. She knew [...]",
+      "Every writer craves an editor who understands both the manuscript and the person behind it. Working with Puja was definitely one of the best parts of my debut publishing journey. She knew exactly when to challenge a sentence and when to let my voice shine. Her suggestions always strengthened the manuscript without taking away its heart, and our easy rapport made the entire process inspiring and genuinely fun.",
     name: "Kamalika Mazumder",
     book: "Heir I Am",
     href: "https://amzn.in/d/0dMjpLbi",
@@ -139,7 +139,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "As an author, I value an editor who not only refines a manuscript but also understands the emotions behind every page. Working with Puja was a truly reassuring experience. She addressed ev[...]",
+      "As an author, I value an editor who not only refines a manuscript but also understands the emotions behind every page. Working with Puja was a truly reassuring experience. She addressed even the smallest of my concerns with patience, professionalism, and genuine care, making the entire editing process smooth and collaborative. What sets Puja apart is her ability to preserve an author's voice while enhancing the manuscript with remarkable attention to detail. She is thoughtful, approachable, and deeply committed to the books she works on. I wholeheartedly recommend her to any author seeking an editor who is both highly skilled and a pleasure to work with.",
     name: "Bindu P. Menon",
     book: "Elani",
     href: "https://amzn.in/d/02xSPi2V",
@@ -147,7 +147,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "As opportunity presented itself, was acquainted with Ms Puja Gupta to edit my book 'Chakra – The Circle of Life'. She has been a tremendous support in editing the manuscript with opennes[...]",
+      "As opportunity presented itself, was acquainted with Ms Puja Gupta to edit my book “Chakra -The Circle of Life”. She has been a tremendous support in editing the manuscript with open ideas as well as prompt Feedback. Always accessible and supportive, Puja Gupta is a joy to work with making the tedious process of editing effortless.",
     name: "Mytri Sanatkumar",
     book: "Chakra – The Circle of Life",
     href: "https://amzn.in/d/00BqYWa8",
@@ -155,15 +155,15 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "In my years as an academic author, I have collaborated with many professionals, but Puja stands in a league of her own. She has been far more than an editor; she has been my strongest supp[...]",
+      "In my years as an academic author, I have collaborated with many professionals, but Puja stands in a league of her own. She has been far more than an editor; she has been my strongest support system and a true guiding force behind my most vigorous academic works. To say she played an essential role in my writing, editing, and creative journey would be an understatement—she has been the visionary who helped me build the foundation of my authorial voice. What sets Puja apart is her profound intellectual generosity. She is an extraordinary listener and a deeply compassionate person. When I found myself blocked as a writer, unable to see a path forward, Puja’s intelligence and wisdom illuminated the way. She has a rare gift for bringing out the best in a writer’s creative journey, not through flattery, but through a deep and sensitive understanding of the material. She was the first person to truly grasp my concepts when others overlooked them, and she validated my work while simultaneously holding up a mirror to my shortcomings in the most sensible and constructive way. Puja’s editorial style is a masterclass in balance. She possesses the tenacity to push her authors beyond their perceived boundaries, yet she does so with immense sensitivity. As someone navigating disabilities such as dyslexia and low vision, I often felt like the writing world was not built for me. But Puja never allowed my circumstances to define my potential. She created an accessible, encouraging environment and guided me toward a positive route, ensuring my voice remained intact while the prose became sharper and more robust. The results of her perseverance speak for themselves. It is largely due to Puja’s dedication and editorial influence that one of my books is now archived in the Irene Lewisohn Costume Reference Library at The Costume Institute of the Metropolitan Museum of Art in New York. That achievement is a testament to her ability to refine a manuscript until it meets the highest standards of scholarship and creativity. Puja is a true visionary with a pure heart and an unmatched eye for potential. She has the influence and the skill to make the best version out of anyone’s writing dreams. She is a gift to the editing world, and any writer fortunate enough to work with her will find not just an editor, but a partner who genuinely cares about their vision. I am deeply grateful for her impact on my life and career, and I recommend her without any hesitation.",
     name: "Nehmat Kaur Dhillon",
     book: "Fashion and Somatic Movement Therapy",
-    href: "https://amzn.in/d/02BvyAi5",
+    href: "https://amzn.in/d/09KCxfCc",
     cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/cover-fashion-somatic_7fb22897.jpg`,
   },
   {
     quote:
-      "I came in touch with Puja over emails when finalising The Alcove as a publisher for my book, Our Roots Run Wild. Right from attending my queries about the whole process to helping me walk [...]",
+      "I came in touch with Puja over emails when finalising The Alcove as a publisher for my book, Our Roots Run Wild. Right from attending my queries about the whole process to helping me walk through it, Puja has been a constant support. Her quick, tireless responses made me feel comfortable in dealing with a publisher half the country away - the distance, in fact, had no consequences. Despite the size and the theme of the book, she has enabled it to see the light of the day. Her editing, in particular, has helped the book come into a readable shape, a skill, among many in the publishing business, that I came to know Puja for.",
     name: "Aniruddha Dhamorikar",
     book: "Our Roots Run Wild",
     href: "https://amzn.in/d/0hlETcNy",
@@ -259,7 +259,7 @@ export const services = [
   {
     no: "03",
     title: "Author Consultancy",
-    body: "Guidance through the publishing process, cover suggestions, formatting ideas, and launch strategy — from manuscript to market.",
+    body: "Guidance through publishing fundamentals, cover suggestions, formatting ideas, and launch strategy — from manuscript to market.",
   },
 ];
 

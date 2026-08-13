@@ -27,7 +27,7 @@ export default function Services() {
             <InkSwash className="hidden sm:block text-sage h-5 w-56 mb-8" />
           </div>
           <div className="flex flex-wrap items-center gap-4 mt-6 reveal" data-reveal-delay="60">
-            <span className="chapter-label">Chapter 02 · How I can help</span>
+            <span className="chapter-label">Chapter 04 · How I can help</span>
             <span className="stamp-note text-xl">three quiet ways</span>
           </div>
           <p className="reveal font-serif text-lg text-muted-foreground max-w-xl mt-4" data-reveal-delay="100">

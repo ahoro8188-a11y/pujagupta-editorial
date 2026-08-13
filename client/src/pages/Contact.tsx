@@ -42,7 +42,7 @@ export default function Contact() {
               Let's <span className="ink-gradient italic">talk</span>
             </h1>
             <div className="flex flex-wrap items-center gap-4 mt-8 reveal" data-reveal-delay="80">
-              <span className="chapter-label">Chapter 03 · Say hello</span>
+              <span className="chapter-label">Chapter 07 · Say hello</span>
               <span className="stamp-note text-xl">no obligations, ever</span>
             </div>
             <InkSwash className="text-terracotta h-4 w-40 mt-6 mb-8 reveal" data-reveal-delay="100" />

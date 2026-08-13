@@ -14,13 +14,17 @@ import { PageShell } from "@/components/layout";
 import { useReveal } from "@/hooks/useReveal";
 
 function WorkEntry({ w, i }: { w: PublishedWorkItem; i: number }) {
+  // We only show numbers for items after the first one (the career profile)
+  const showNumber = i > 0;
+  const displayIndex = i; // The second item becomes "01", third "02", etc.
+
   return (
     <article
       className="reveal flex items-baseline gap-6 md:gap-12 py-10 border-t border-border last:border-b group"
       data-reveal-delay={String(i * 70)}
     >
       <span className="font-display text-5xl font-semibold text-terracotta/60 group-hover:text-terracotta transition-colors w-24 shrink-0">
-        {String(i + 1).padStart(2, "0")}
+        {showNumber ? String(displayIndex).padStart(2, "0") : ""}
       </span>
       <div className="min-w-0">
         <h2 className="font-display text-2xl sm:text-3xl font-semibold text-ink group-hover:text-sage-dark transition-colors leading-snug">

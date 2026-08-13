@@ -25,7 +25,7 @@ export default function Testimonials() {
             From the authors I've worked with
           </h1>
           <div className="flex flex-wrap items-center gap-4 mt-8 reveal" data-reveal-delay="60">
-            <span className="chapter-label">Chapter 05 · Kind words</span>
+            <span className="chapter-label">Chapter 06 · Kind words</span>
             <span className="stamp-note text-xl">shared only with permission</span>
           </div>
         </section>

@@ -16,7 +16,7 @@ export default function About() {
         <section className="container pt-16 pb-14">
           <div className="flex items-center gap-3 mb-6 reveal">
             <span className="h-px w-10 bg-terracotta" />
-            <p className="marginalia">My Story</p>
+            <p className="marginalia">Chapter 02 · My Story</p>
           </div>
           <h1 className="reveal font-display text-[4rem] sm:text-[6rem] leading-[0.95] font-semibold">
             About <span className="ink-gradient italic">Puja</span>
@@ -99,8 +99,8 @@ export default function About() {
                   {[
                     { d: "MBA (HR)", s: "BVIMR, New Delhi — 1992–1994" },
                     { d: "BSc (PCM)", s: "Hansraj College, Delhi University — 1989–1992" },
-                    { d: "Intermediate", s: "Ramjas School, New Delhi, CBSE — 1989" },
-                    { d: "Matriculation", s: "Ramjas School, New Delhi, CBSE — 1987" },
+                    { d: "AISSCE", s: "Ramjas School, New Delhi, CBSE — 1989" },
+                    { d: "Initial Schooling", s: "St. Mary’s School, New Delhi, CBSE – till 1986" },
                   ].map((e) => (
                     <div key={e.d} className="reveal border-b border-border pb-4">
                       <p className="font-display text-xl font-semibold text-ink">{e.d}</p>
