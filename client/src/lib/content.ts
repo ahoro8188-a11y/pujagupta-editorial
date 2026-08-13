@@ -200,37 +200,41 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     title: "Be One of a 'Kind'",
     excerpt:
-      "Kindness is a thought that arrives with no ulterior motive. Calm, unarticulated, almost transparent — and most of all, unassuming. Here is where I draw the line between kindness and i[...]",
+      "Kindness is a thought that arrives with no ulterior motive. Calm, unarticulated, almost transparent — and most of all, unassuming. Here is where I draw the line between kindness and its counterfeits.",
     featured: true,
     image: ASSETS.blogFeatured,
     body: [
       {
         kind: "p",
-        text: "Since forever, we have known Kindness as a virtue — much celebrated and sought after. Who would not want to have a Kind boss in the corporate jungle, Kind words from a friend in [...]",
+        text: "Since forever, we have known Kindness as a virtue – much celebrated and sought after.",
       },
       {
         kind: "p",
-        text: "For me, Kindness is a thought that comes to you with no ulterior motive. It shows in your actions but without a rider. It's calm, non-articulated, almost transparent and most of al[...]",
+        text: "Who would not want to have – a Kind boss in the corporate jungle, Kind words from a friend in times of trouble, a Kind gesture in the throes of despair.",
       },
       {
         kind: "p",
-        text: "More often than not, Kindness is confused with being selfless — to the extent of jeopardising one's own feelings. And that is where I differ.",
-      },
-      {
-        kind: "h2",
-        text: "Kindness is not self-erasure",
+        text: "For me, Kindness is a thought that comes to you with no ulterior motive. It shows in your actions but without a rider. It’s calm, non-articulated, almost transparent and most of all unassuming.",
       },
       {
         kind: "p",
-        text: "Being Kind in no way implies that you are not entitled to set boundaries or be honest in your feedback, knowing well that it might not be taken in the right spirit. Kindness also d[...]",
+        text: "More often than not, Kindness is confused with being selfless – to the extent of jeopardising one’s own feelings.",
       },
       {
         kind: "p",
-        text: "On the other hand, being 'too Kind' is something one needs to be wary of. For Kindness does not announce itself — it does not attempt to be recognised or dramatic. Often what loo[...]",
+        text: "And that is where I differ.",
       },
       {
         kind: "p",
-        text: "Kindness does not seek to burden; it seeks to uplift — uplifting without being a burden. It is a gentle presence that offers solace without leaving scars of strife.",
+        text: "Being Kind in no way implies that you are not entitled to set boundaries or be honest in your feedback knowing well that it might not be taken in the right spirit. Kindness also does not mean that you put up with any unfair treatment or toxic patterns.",
+      },
+      {
+        kind: "p",
+        text: "On the other hand being ‘too Kind’ is something one needs to be wary off. For Kindness does not announce itself – it does not attempt to be recognised or dramatic. Often what is being crafted and creating a perception is not Kindness – rather a cloak. And beneath that lies the raw truth that is far uglier in proportion to the fake front being put up.",
+      },
+      {
+        kind: "p",
+        text: "Kindness does not seek to burden; it seeks to uplift. uplifting without being a burden. It is a gentle presence that offers solace without leaving scars of strife.",
       },
       {
         kind: "quote",
@@ -239,7 +243,7 @@ export const blogPosts: BlogPost[] = [
       { kind: "attribution", text: "— Charles Glassman" },
       {
         kind: "p",
-        text: "So be Kind in whichever capacity you can be, but don't forget to count yourself in the list.",
+        text: "So be Kind in whichever capacity you can be, but don’t forget to count yourself in the list.",
       },
     ],
   },
