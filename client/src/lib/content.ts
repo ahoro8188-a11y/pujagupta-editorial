@@ -176,6 +176,14 @@ export const testimonials: Testimonial[] = [
     book: "And the River Flows",
     cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/celia-abraham_cover.jpg.jpeg`,
   },
+  {
+    quote:
+      "My association with Puja started with the editing of my second book, Amaltas. Though the manuscript had been professionally edited twice before, Puja could still spot the blemishes. I was impressed. Getting the cover of Amaltas right was a struggle. I did my best to annoy Puja with my repeated requests for customisation, but she was patient during the entire process. The first time I met Puja was at the launch of Amaltas. She moderated the interaction. During the course of the event, I realized that here was someone who genuinely loved Amaltas as much as myself, if not more. The thought was very inspiring and encouraging. Puja, with her grace, charm and articulation made the launch of my book memorable. She carried the entire event on her shoulders. Since then, Puja has been my go to person for literary and publishing consultation. Thank you Puja, for Amaltas and everything else. P.S. : Puja is a brilliant closet poet.",
+    name: "Hermit Pen",
+    book: "Amaltas",
+    href: "https://amzn.in/d/0baB38V2",
+    cover: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/cover-amaltas_e339c921.jpg`,
+  },
 ];
 
 export interface BlogPost {
