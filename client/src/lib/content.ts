@@ -255,6 +255,55 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "life-comes-without-a-manual",
+    number: "No. 02",
+    category: "Essay",
+    date: "August 2026",
+    readTime: "3 min read",
+    title: "Life comes without a Manual",
+    excerpt:
+      "A winner is always celebrated, but life is about far more than the race. Our timelines, challenges, and destinations may differ, yet the real beauty lies in learning to relish the journey.",
+    body: [
+      {
+        kind: "p",
+        text: "A winner is always celebrated, and who wouldn’t want to be one. But is it just about the race? Or is life way beyond just this journey?",
+      },
+      {
+        kind: "p",
+        text: "The journey each one of us undertakes is as individualistic as we are. We traverse and manoeuvre our paths in our own personal ways, crossing the hurdles and surging ahead.",
+      },
+      {
+        kind: "p",
+        text: "Our timelines are different and so are our challenges. Our pace, our end goal, in fact even our starting points are also varied.",
+      },
+      {
+        kind: "p",
+        text: "And that’s precisely the beauty of life. It’s just that we would have travelled a substantially long distance by the time we realise that it was never about the destination – it was always the journey.",
+      },
+      {
+        kind: "p",
+        text: "There are no wrong ways of taking a right decision and no wrong decision can ever be countered by right logic. But then that’s how wisdom arrives – in moments and mistakes we could never have imagined.",
+      },
+      {
+        kind: "p",
+        text: "Many a times, when we observe another person going through a similar phase or challenge – the natural reflex is to caution or advise. But more often than not it falls on deaf ears. Because unless one experiences the burn – one won’t be wary of the iron.",
+      },
+      {
+        kind: "p",
+        text: "The beauty of life is not in consuming it all; it is in relishing the fragments of any moment that would make it beautiful.",
+      },
+      {
+        kind: "quote",
+        text: "Life isn’t about finding yourself. Life is about creating yourself.",
+      },
+      { kind: "attribution", text: "— George Bernard Shaw" },
+      {
+        kind: "p",
+        text: "So the next time you chase a target or draw an itinerary, pause and reroute; let the joy find you when it’s meant to enter your life.",
+      },
+    ],
+  },
 ];
 
 export const services = [
@@ -274,7 +323,6 @@ export const services = [
     body: "Guidance through publishing fundamentals, cover suggestions, formatting ideas, and launch strategy — from manuscript to market.",
   },
 ];
-
 
 export const navLinks = [
   { href: "/", label: "Home" },

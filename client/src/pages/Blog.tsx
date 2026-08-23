@@ -26,13 +26,17 @@ export default function Blog() {
             </h1>
             <InkSwash className="hidden sm:block text-sage h-5 w-56 mb-8" />
           </div>
-          <p className="reveal font-serif text-lg text-muted-foreground max-w-xl mt-4 leading-relaxed" data-reveal-delay="100">
-            Essays on life, craft, and the honest work of shaping stories — one quiet page at a time.
+          <p
+            className="reveal font-serif text-lg text-muted-foreground max-w-xl mt-4 leading-relaxed"
+            data-reveal-delay="100"
+          >
+            Essays on life, craft, and the honest work of shaping stories — one
+            quiet page at a time.
           </p>
         </section>
 
         {/* ── Featured essay spread ────────────────────────── */}
-        {blogPosts.map((post) =>
+        {blogPosts.map(post =>
           post.featured ? (
             <section key={post.slug} className="border-t border-border">
               <div className="container py-16">
@@ -71,7 +75,7 @@ export default function Blog() {
                 </div>
               </div>
             </section>
-          ) : null,
+          ) : null
         )}
 
         {/* ── Journal list (entries arrive patiently) */}
@@ -84,21 +88,36 @@ export default function Blog() {
               </span>
             </div>
             <div className="reveal editorial-rule max-w-2xl mx-auto mb-14">
-              <span className="font-display italic text-terracotta text-lg">✦</span>
+              <span className="font-display italic text-terracotta text-lg">
+                ✦
+              </span>
             </div>
-            <div className="reveal max-w-2xl mx-auto border-l-2 border-sage/40 pl-8 py-2">
-              <p className="font-display text-2xl italic text-ink mb-4">
-                No. 02 — written, one day soon.
-              </p>
-              <p className="font-serif text-base text-muted-foreground leading-relaxed">
-                The desk holds half-finished drafts and a few poems waiting to
-                grow. New entries arrive as they are written — patient work,
-                like all good drafts. If you'd like to hear when the next essay
-                appears, leave your name on the contact page.
-              </p>
-              <p className="mt-6 font-mono text-[0.65rem] tracking-[0.16em] uppercase text-muted-foreground">
-                — a note from Puja's desk, August 2026
-              </p>
+            <div className="max-w-2xl mx-auto space-y-10">
+              {blogPosts
+                .filter(post => !post.featured)
+                .map(post => (
+                  <article
+                    key={post.slug}
+                    className="reveal border-l-2 border-sage/40 pl-8 py-2"
+                  >
+                    <p className="marginalia mb-3">
+                      {post.number} · {post.category} · {post.date} ·{" "}
+                      {post.readTime}
+                    </p>
+                    <h2 className="font-display text-3xl sm:text-4xl font-semibold text-ink mb-4">
+                      {post.title}
+                    </h2>
+                    <p className="font-serif text-base text-muted-foreground leading-relaxed">
+                      {post.excerpt}
+                    </p>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="swash-link mt-6 inline-block font-mono text-xs tracking-[0.14em] uppercase text-ink"
+                    >
+                      Read the essay →
+                    </Link>
+                  </article>
+                ))}
             </div>
             <div className="reveal mt-16 flex items-center gap-4 justify-center">
               <Link
