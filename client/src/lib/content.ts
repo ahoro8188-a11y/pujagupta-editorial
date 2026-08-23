@@ -264,7 +264,7 @@ export const blogPosts: BlogPost[] = [
     title: "Life comes without a Manual",
     excerpt:
       "A winner is always celebrated, but life is about far more than the race. Our timelines, challenges, and destinations may differ, yet the real beauty lies in learning to relish the journey.",
-    image: ASSETS.blogFeatured,
+    image: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/blog-life-manual.jpg`,
     body: [
       {
         kind: "p",
