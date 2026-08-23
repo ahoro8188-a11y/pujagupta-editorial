@@ -78,57 +78,57 @@ export default function Blog() {
           ) : null
         )}
 
-        {/* ── Journal list (entries arrive patiently) */}
-        <section className="border-t border-border bg-paper-deep/60">
-          <div className="container py-16">
-            <div className="flex items-center gap-4 mb-12 reveal">
-              <span className="chapter-label">Chapter 05 · The Journal</span>
-              <span className="stamp-note text-xl hidden sm:inline-block">
-                earlier &amp; upcoming
-              </span>
-            </div>
-            <div className="reveal editorial-rule max-w-2xl mx-auto mb-14">
-              <span className="font-display italic text-terracotta text-lg">
-                ✦
-              </span>
-            </div>
-            <div className="max-w-2xl mx-auto space-y-10">
-              {blogPosts
-                .filter(post => !post.featured)
-                .map(post => (
-                  <article
-                    key={post.slug}
-                    className="reveal border-l-2 border-sage/40 pl-8 py-2"
-                  >
-                    <p className="marginalia mb-3">
-                      {post.number} · {post.category} · {post.date} ·{" "}
-                      {post.readTime}
+        {/* ── Second essay spread ───────────────────────────── */}
+        {blogPosts.map(post =>
+          !post.featured ? (
+            <section key={post.slug} className="border-t border-border">
+              <div className="container py-16">
+                <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
+                  <div className="reveal relative">
+                    <div className="overflow-hidden border border-border">
+                      <Link href={`/blog/${post.slug}`}>
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full object-cover aspect-[16/10] hover:scale-[1.03] transition-transform duration-500"
+                        />
+                      </Link>
+                    </div>
+                    <span className="absolute -top-4 -right-3 font-mono text-[0.65rem] tracking-[0.14em] uppercase bg-sage-dark text-[oklch(0.97_0.015_85)] px-3 py-1.5 rotate-[2deg] shadow-md">
+                      {post.number} · {post.category}
+                    </span>
+                  </div>
+                  <div className="reveal relative" data-reveal-delay="120">
+                    <p className="marginalia mb-4">
+                      {post.number} · {post.date} · {post.readTime}
                     </p>
-                    <h2 className="font-display text-3xl sm:text-4xl font-semibold text-ink mb-4">
+                    <h2 className="font-display text-4xl sm:text-5xl font-semibold leading-tight mb-6">
                       {post.title}
                     </h2>
-                    <p className="font-serif text-base text-muted-foreground leading-relaxed">
+                    <p className="font-serif text-lg text-muted-foreground leading-relaxed mb-8">
                       {post.excerpt}
                     </p>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="swash-link mt-6 inline-block font-mono text-xs tracking-[0.14em] uppercase text-ink"
+                      className="swash-link font-mono text-xs tracking-[0.14em] uppercase text-ink inline-block"
                     >
                       Read the essay →
                     </Link>
-                  </article>
-                ))}
-            </div>
-            <div className="reveal mt-16 flex items-center gap-4 justify-center">
-              <Link
-                href="/"
-                className="swash-link font-mono text-xs tracking-[0.14em] uppercase text-ink"
-              >
-                Return to the homepage →
-              </Link>
-            </div>
-          </div>
-        </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          ) : null
+        )}
+
+        <div className="container py-16 flex items-center gap-4 justify-center">
+          <Link
+            href="/"
+            className="swash-link font-mono text-xs tracking-[0.14em] uppercase text-ink reveal"
+          >
+            Return to the homepage →
+          </Link>
+        </div>
       </div>
     </PageShell>
   );
