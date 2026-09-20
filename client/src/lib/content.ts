@@ -7,6 +7,7 @@ export const ASSETS = {
   heroPortrait: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/puja-hero_d6b0cfc3.png`,
   aboutPhoto: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/puja-portrait_783cb0ee.png`,
   blogFeatured: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/blog-featured-kindness_557dd10a.png`,
+  blogSilence: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/blog-power-of-silence.jpg`,
   logo: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/ink-leaf-logo_db66f81d.png`,
   texture: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/texture-paper_f1a571ab.png`,
 };
@@ -302,6 +303,31 @@ export const blogPosts: BlogPost[] = [
       {
         kind: "p",
         text: "So the next time you chase a target or draw an itinerary, pause and reroute; let the joy find you when it’s meant to enter your life.",
+      },
+    ],
+  },
+  {
+    slug: "the-power-of-silence",
+    number: "No. 03",
+    category: "Essay",
+    date: "September 2026",
+    readTime: "4 min read",
+    title: "The Power of Silence",
+    excerpt:
+      "Words can say it all, but the power of silence is unmatched. Where words ignite the flame, silence simmers the blaze — a canvas for thought, mastery, and the answers we spend days searching for.",
+    image: ASSETS.blogSilence,
+    body: [
+      {
+        kind: "p",
+        text: "How many times have you faced this unconsolable desire to shout your heart out? When the chaos in your mind gives way to insurmountable inner turmoil, you are left with a cringing that's hard to control. When the heart is crying out loud inside, somehow words fail to do justice to the pain and anguish. The silence is deafening. It wallows with the thought and the emotion you are carrying within you, but you are unable to put a voice to it. That silence is way too strong and looms large over your persona. Words can say it all, but the power of silence is unmatched. Where words can be construed and misconstrued in a very subjective manner, silence gives a depth that's powerful yet calming. Where words ignite the flame or raise the temperature, silence simmers the blaze and the searing.",
+      },
+      {
+        kind: "p",
+        text: "One who preserves his speech — conserves his power. When you speak, you put a lot of your strength in your words and share with people, thereby distributing most of it unknowingly. Silence is the mark of a strong and understanding soul. Of the evolved and the powerful, of the mature and the sensible. When you master your tongue, you master your thoughts and eventually your energy. Silence does not mean just not speaking out loud. It also means silencing the quavering mind, the rumbling of thoughts, the fluttering of emotions. Silence means a steady stance, an unmoved approach, a balanced outlook and a peaceful existence. The more you silence your words, the more you still your mind. The more you do that, the more you control yourself. And once you govern yourself, you are the master of your actions and emotions, deeds and thoughts, power and being.",
+      },
+      {
+        kind: "p",
+        text: "Silence is a great canvas for your thoughts. When you shut out the noise, free flows the stream of beautiful thoughts. An uninterrupted lava of creativity emerges which acquires the most spectacular shape and form that could be. And all because of the positive power that the silence carries within itself. When the distractions buzz out, and the peace engulfs you, it's precious to savour the silence and stillness. Reading, writing and meditating are the most powerful and effective means of incorporating silence in your life. My best blogs have been when I was writing to escape a situation and chose to vent out my emotions and energies without speaking. It left me calmer, happier and richer. Coz my otherwise reckless thinking found a soothing path and made some sense. So who are you in your quietest moments? Sit back and let your silence give you all the answers you have spent days and days searching for. It will be the most enriching experience you could have!",
       },
     ],
   },
