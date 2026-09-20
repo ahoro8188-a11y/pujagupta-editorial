@@ -36,6 +36,15 @@ export default function Article() {
             {post.title}
           </h1>
           <InkSwash className="text-terracotta h-4 w-36 mt-6 mb-8 reveal" data-reveal-delay="140" />
+          {post.image ? (
+            <div className="reveal overflow-hidden border border-border mt-4 mb-2" data-reveal-delay="180">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full object-cover aspect-[16/10]"
+              />
+            </div>
+          ) : null}
         </section>
 
         {/* ── Reading spread with margin annotations ───────── */}
