@@ -5,7 +5,7 @@
  */
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ASSETS, services, testimonials } from "@/lib/content";
+import { ASSETS, blogPosts, services, testimonials } from "@/lib/content";
 import { InkSwash, Marquee, PageShell } from "@/components/layout";
 import { useReveal } from "@/hooks/useReveal";
 
@@ -177,32 +177,39 @@ export default function Home() {
               All essays →
             </Link>
           </div>
-          <Link href="/blog" className="reveal group block">
-            <div className="grid md:grid-cols-[1.4fr_1fr] gap-10 items-center">
-              <div className="overflow-hidden border border-border">
-                <img
-                  src={ASSETS.blogFeatured}
-                  alt="Be One of a 'Kind' — tea and eucalyptus on linen"
-                  className="w-full object-cover aspect-[16/10] group-hover:scale-[1.03] transition-transform duration-500"
-                />
-              </div>
-              <div>
-                <p className="marginalia mb-3">August 2026 · 4 min read</p>
-                <h3 className="font-display text-3xl font-semibold group-hover:text-sage-dark transition-colors duration-300">
-                  Be One of a 'Kind'
-                </h3>
-                <p className="font-serif text-base text-muted-foreground mt-4 leading-relaxed">
-                  Kindness is a thought that arrives with no ulterior motive.
-                  Calm, unarticulated, almost transparent — and most of all,
-                  unassuming. Here is where I draw the line between kindness and
-                  its counterfeits.
-                </p>
-                <span className="mt-6 inline-block font-mono text-xs tracking-[0.14em] uppercase text-terracotta">
-                  Read the essay →
-                </span>
-              </div>
-            </div>
-          </Link>
+          <div className="space-y-16">
+            {blogPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="reveal group block"
+              >
+                <div className="grid md:grid-cols-[1.4fr_1fr] gap-10 items-center">
+                  <div className="overflow-hidden border border-border">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full object-cover aspect-[16/10] group-hover:scale-[1.03] transition-transform duration-500"
+                    />
+                  </div>
+                  <div>
+                    <p className="marginalia mb-3">
+                      {post.number} · {post.date} · {post.readTime}
+                    </p>
+                    <h3 className="font-display text-3xl font-semibold group-hover:text-sage-dark transition-colors duration-300">
+                      {post.title}
+                    </h3>
+                    <p className="font-serif text-base text-muted-foreground mt-4 leading-relaxed">
+                      {post.excerpt}
+                    </p>
+                    <span className="mt-6 inline-block font-mono text-xs tracking-[0.14em] uppercase text-terracotta">
+                      Read the essay →
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </section>
       </div>
     </PageShell>
