@@ -312,7 +312,7 @@ export const blogPosts: BlogPost[] = [
     category: "Essay",
     date: "September 2026",
     readTime: "4 min read",
-    title: "The Power of Silence",
+    title: "When the Silence Speaks",
     excerpt:
       "Words can say it all, but the power of silence is unmatched. Where words ignite the flame, silence simmers the blaze — a canvas for thought, mastery, and the answers we spend days searching for.",
     image: ASSETS.blogSilence,
