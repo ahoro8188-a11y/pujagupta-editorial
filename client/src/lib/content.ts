@@ -8,6 +8,7 @@ export const ASSETS = {
   aboutPhoto: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/puja-portrait_783cb0ee.png`,
   blogFeatured: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/blog-featured-kindness_557dd10a.png`,
   blogSilence: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/blog-power-of-silence.jpg`,
+  blogPerfect: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/blog-is-perfect-really-perfect.jpg`,
   logo: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/ink-leaf-logo_db66f81d.png`,
   texture: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/texture-paper_f1a571ab.png`,
 };
@@ -328,6 +329,56 @@ export const blogPosts: BlogPost[] = [
       {
         kind: "p",
         text: "Silence is a great canvas for your thoughts. When you shut out the noise, free flows the stream of beautiful thoughts. An uninterrupted lava of creativity emerges which acquires the most spectacular shape and form that could be. And all because of the positive power that the silence carries within itself. When the distractions buzz out, and the peace engulfs you, it's precious to savour the silence and stillness. Reading, writing and meditating are the most powerful and effective means of incorporating silence in your life. My best blogs have been when I was writing to escape a situation and chose to vent out my emotions and energies without speaking. It left me calmer, happier and richer. Coz my otherwise reckless thinking found a soothing path and made some sense. So who are you in your quietest moments? Sit back and let your silence give you all the answers you have spent days and days searching for. It will be the most enriching experience you could have!",
+      },
+    ],
+  },
+  {
+    slug: "is-perfect-really-perfect",
+    number: "No. 04",
+    category: "Essay",
+    date: "October 2026",
+    readTime: "3 min read",
+    title: "Is 'Perfect' really Perfect?",
+    excerpt:
+      "An amazing house, a super successful career, a healthy and loving relationship — sounds perfect, doesn't it? But is life just about chasing these... or can things be imperfect, yet beautiful?",
+    image: ASSETS.blogPerfect,
+    body: [
+      {
+        kind: "p",
+        text: "An amazing house, a super successful career, a healthy and loving relationship — sounds perfect, doesn't it? But is life just about chasing these... or can things be imperfect, yet beautiful?",
+      },
+      {
+        kind: "p",
+        text: "We often chase perfectionism because 'perfection seems like protection'. What we fail to realise is that it is like an impossible finish line — the race never ends!",
+      },
+      {
+        kind: "p",
+        text: "Our imperfections are what make us unique. We are not products of an assembly line; we are like the snowflakes on the mountains — each different from the other yet as mesmerising.",
+      },
+      {
+        kind: "p",
+        text: "To me, 'perfection' distances and alienates. It is what you can call the 'too good to be true' effect. We should definitely aim to be the best version possible, but not at the cost of losing our self-worth.",
+      },
+      {
+        kind: "p",
+        text: "Growth and learning are an integral part of evolving as human beings, but embracing your flaws is akin to celebrating your individuality.",
+      },
+      {
+        kind: "quote",
+        text: "Absolute perfection belongs not to man, nor to angels, but to God alone.",
+      },
+      { kind: "attribution", text: "— John Wesley" },
+      {
+        kind: "p",
+        text: "And God bless those who suffer from the God's syndrome; it can be not only self-destructive but also irreparably dangerous. To be able to live harmoniously with others, it is imperative that we let go of their errors and limitations; no one likes to be made to feel small or incompetent just because they are not up to the mark to your standards.",
+      },
+      {
+        kind: "p",
+        text: "To the mortal ones like me, I would say:",
+      },
+      {
+        kind: "p",
+        text: "Love yourself as you are — You were born to be real, not perfect!",
       },
     ],
   },
